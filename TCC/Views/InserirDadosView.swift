@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  TCC
-//
-//  Created by Guilherme Ferreira Lenzolari on 23/04/24.
-//
-
 import SwiftUI
 
 struct InserirDadosView: View {
@@ -12,32 +5,49 @@ struct InserirDadosView: View {
     @EnvironmentObject var contas: InserirDadosViewController
     @State var isTextFieldFilled = false
     @Binding var selectedTab: Int
+    @State private var area: Double = 0.0
+    
+    private var numberFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack {
-                Form{
-                    Section(header: Text("Coleta"), footer: Text("Área da superfície que será utilizada para coletar a água da chuva como telhados, lajes, calhas, etc.")){
-                        TextField("Área de Captação (m³)", text: $contas.area)
+                Form {
+                    Section(header: Text("Coleta"), footer: Text("Área da superfície utilizada para coletar água da chuva (ex: telhados, lajes, calhas).")) {
+                        TextField("Área de Captação (m²)", value: $contas.area, formatter: numberFormatter)
                             .keyboardType(.numberPad)
                     }
                     
-                    Section(footer: Text("Valor pode ser encontrado na conta de água sua residência. Pode variar de acordo com a faixa de consumo e localização da residência")){
-                        TextField("Preço da água (R$/m³)", text: $contas.tarifaDaAgua)
+                    Section(footer: Text("Valor encontrado na conta de água. Pode variar com o consumo e localização.")) {
+                        TextField("Preço da água (R$/m³)", value: $contas.tarifaDaAgua, formatter: numberFormatter)
                             .keyboardType(.numberPad)
                     }
                     
-                    Section(header: Text("Demanda"), footer: Text("Preencha apenas um dos dois campos acima. Preencher o campo de ”Consumo mensal de água” retornará resultados mais precisos.")){
-                        TextField("Consumo médio mensal de água (m³)", text: $contas.consumoMediaDaResidencia)
+                    Section(footer: Text("Se não souber, deixe em branco. Valor padrão de 30% será usado.")) {
+                        TextField("Percentual de água potável substituída (%)", value: $contas.percentualAguaSubstituida, formatter: numberFormatter)
                             .keyboardType(.numberPad)
-                            .disabled(!contas.quantidadeMoradoresDaResidencia.isEmpty)
+                    }
+                    
+                    Section(header: Text("Demanda"), footer: Text("Preencha apenas um dos campos acima. Preencher 'Consumo mensal de água' dá resultados mais precisos.")) {
+                        TextField("Consumo médio mensal de água (m³)", value: $contas.consumoMediaDaResidencia, formatter: numberFormatter)
+                            .keyboardType(.numberPad)
+                            .disabled(contas.quantidadeMoradoresDaResidencia != 0)
                         
-                        TextField("Quantidade de moradores", text: $contas.quantidadeMoradoresDaResidencia)
+                        TextField("Quantidade de moradores", value: $contas.quantidadeMoradoresDaResidencia, formatter: numberFormatter)
                             .keyboardType(.numberPad)
-                            .disabled(!contas.consumoMediaDaResidencia.isEmpty)
+                            .disabled(contas.consumoMediaDaResidencia != 0)
                     }
                     
-                    Section{
+                    Section(header: Text("Armazenamento"), footer: Text("O volume máximo deve considerar o custo, área de instalação e demanda.")) {
+                        TextField("Volume máximo do tanque (m³)", value: $contas.volumeMaximoTanque, formatter: numberFormatter)
+                            .keyboardType(.numberPad)
+                    }
+                    
+                    Section {
                         Button(action: {
                             selectedTab = 1
                         }, label: {
@@ -52,8 +62,6 @@ struct InserirDadosView: View {
             }
             .navigationTitle(Text("Insira os dados da sua residência"))
             .navigationBarTitleDisplayMode(.inline)
-            
         }
     }
 }
-
