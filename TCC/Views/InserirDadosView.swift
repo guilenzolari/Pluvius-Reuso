@@ -27,11 +27,6 @@ struct InserirDadosView: View {
                             .keyboardType(.numberPad)
                     }
                     
-                    Section(footer: Text("Se não souber, deixe em branco. Valor padrão de 30% será usado.")) {
-                        TextField("Percentual de água potável substituída (%)", value: $contas.percentualAguaSubstituida, formatter: numberFormatter)
-                            .keyboardType(.numberPad)
-                    }
-                    
                     Section(header: Text("Demanda"), footer: Text("Preencha apenas um dos campos acima. Preencher 'Consumo mensal de água' dá resultados mais precisos.")) {
                         TextField("Consumo médio mensal de água (m³)", value: $contas.consumoMediaDaResidencia, formatter: numberFormatter)
                             .keyboardType(.numberPad)

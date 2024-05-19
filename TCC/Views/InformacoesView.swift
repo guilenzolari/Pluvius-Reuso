@@ -1,16 +1,20 @@
-//
-//  Informacoes.swift
-//  TCC
-//
-//  Created by Guilherme Ferreira Lenzolari on 23/04/24.
-//
-
 import SwiftUI
+import Charts
 
 struct InformacoesView: View {
     @Binding var selectedTab: Int
+    @StateObject var dadosVolume = CalculoVolumeReservatorio()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Chart {
+            ForEach(dadosVolume.mesesDoAno.indices, id: \.self) { index in
+                BarMark(
+                    x: .value("Mês", dadosVolume.mesesDoAno[index]),
+                    y: .value("Precipitação (mm)", dadosVolume.mediaMensalPrecipitacao[index])
+                )
+            }
+        }
+        .aspectRatio(1, contentMode: .fit)
     }
 }

@@ -12,7 +12,6 @@ class InserirDadosViewController: ObservableObject {
     @Published var tarifaDaAgua: Double = 0.0 // R$/m3
     @Published var consumoMediaDaResidencia: Double = 0.0 // m3/mes
     @Published var quantidadeMoradoresDaResidencia = 0.0
-    @Published var percentualAguaSubstituida = 0.0
     @Published var volumeMaximoTanque = 0.0
     
     func isTextFieldFilled() -> Bool{

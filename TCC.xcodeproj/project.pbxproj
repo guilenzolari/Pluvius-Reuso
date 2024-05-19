@@ -99,6 +99,10 @@
 		F292B22C2BE2DFB30037E409 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */,
+				F295EC282BE5680F005DAC05 /* calculoOPEX.swift */,
+				F20145BD2BDED3CB00C49F91 /* CalculoVolumeReservatorio.swift */,
+				F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */,
 				F24E13F12BD8839500ED1579 /* InserirDadosViewController.swift */,
 			);
 			path = ViewModel;
@@ -107,10 +111,6 @@
 		F295EC252BE55B58005DAC05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */,
-				F295EC282BE5680F005DAC05 /* calculoOPEX.swift */,
-				F20145BD2BDED3CB00C49F91 /* CalculoVolumeReservatorio.swift */,
-				F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

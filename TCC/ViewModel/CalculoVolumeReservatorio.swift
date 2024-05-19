@@ -7,10 +7,14 @@
 
 import Foundation
 
-class CalculoVolumeReservatorio {
+class CalculoVolumeReservatorio: ObservableObject {
     let coeficienteRunoff = 0.9
     let porcentagemSubstituidaPorAguaPluvial = 0.4
     let consumoMedioPorPessoa = 156.0 // pessoa/L
+    let mesesDoAno = [
+          "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
+          "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+      ]
     let mediaMensalPrecipitacao: [Double] = [
         178.1,258.8,81.3,12.2,23.4,27.1,0,15.5,6.6,121.4,83.8,168.1,312.9,
 168.4,130.8,40.1,39.4,15.7,8.9,28.2,89.7,120.4,142.5,324.1] //mm de chuva
