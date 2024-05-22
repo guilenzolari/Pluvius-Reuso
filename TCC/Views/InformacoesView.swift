@@ -3,18 +3,13 @@ import Charts
 
 struct InformacoesView: View {
     @Binding var selectedTab: Int
-    @StateObject var dadosVolume = CalculoVolumeReservatorio()
     
     var body: some View {
-        
-        Chart {
-            ForEach(dadosVolume.mesesDoAno.indices, id: \.self) { index in
-                BarMark(
-                    x: .value("Mês", dadosVolume.mesesDoAno[index]),
-                    y: .value("Precipitação (mm)", dadosVolume.mediaMensalPrecipitacao[index])
-                )
-            }
+        NavigationView {
+            VStack {
+                Text("AAA")
+            }.navigationTitle(Text("Informações"))
+                .navigationBarTitleDisplayMode(.inline)
         }
-        .aspectRatio(1, contentMode: .fit)
     }
 }

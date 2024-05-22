@@ -7,7 +7,7 @@
 
 import Foundation
 
-class InserirDadosViewController: ObservableObject {
+class InserirDadosViewModel: ObservableObject {
     @Published var area: Double = 0.0 // m2
     @Published var tarifaDaAgua: Double = 0.0 // R$/m3
     @Published var consumoMediaDaResidencia: Double = 0.0 // m3/mes

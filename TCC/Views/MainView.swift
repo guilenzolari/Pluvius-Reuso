@@ -31,5 +31,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView().environmentObject(InserirDadosViewController())
+    MainView().environmentObject(InserirDadosViewModel())
 }

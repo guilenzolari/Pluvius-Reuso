@@ -2,7 +2,7 @@ import SwiftUI
 
 struct InserirDadosView: View {
     
-    @EnvironmentObject var contas: InserirDadosViewController
+    @EnvironmentObject var contas: InserirDadosViewModel
     @State var isTextFieldFilled = false
     @Binding var selectedTab: Int
     @State private var area: Double = 0.0
