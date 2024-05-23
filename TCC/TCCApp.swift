@@ -9,9 +9,7 @@ import SwiftUI
 
 @main
 struct TCCApp: App {
-    @AppStorage("isOnboarding") var isOnboarding: Bool = true
-    @StateObject var inserirDadosViewController = InserirDadosViewModel()
-    
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true    
     var body: some Scene {
         WindowGroup {
             NavigationStack{
@@ -21,6 +19,6 @@ struct TCCApp: App {
                     MainView()
                 }
             }
-        }.environmentObject(inserirDadosViewController)
+        }
     }
 }

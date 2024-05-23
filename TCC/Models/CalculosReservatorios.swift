@@ -9,17 +9,14 @@ import Foundation
 import SwiftUI
 
 class CalculosReservatorios: ObservableObject {
+    
     let consumoMedioPessoa: Double = 156 // Litros/dia*pessoa
     let coeficienteAproveitamento: Double = 0.8
-    @EnvironmentObject var inputs: InserirDadosViewModel
-    let mediaMensalPrecipitacao: [Double] = [178.1, 258.8, 81.3, 12.2, 23.4, 27.1, 0, 15.5, 6.6, 121.4, 83.8, 168.1, 312.9, 168.4, 130.8, 40.1, 39.4, 15.7, 8.9, 28.2, 89.7, 120.4, 142.5, 324.1]
+    let precipitacaoMensal: [Double] = [178.1, 258.8, 81.3, 12.2, 23.4, 27.1, 0, 15.5, 6.6, 121.4, 83.8, 168.1, 312.9, 168.4, 130.8, 40.1, 39.4, 15.7, 8.9, 28.2, 89.7, 120.4, 142.5, 324.1]
     let percentualDeSubstituicao = [0.25, 0.3, 0.35, 0.4, 0.45]
-    let valores = [600, 1000, 1600, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
+    let volumesTanques = [600, 1000, 1600, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     
-    var volumeDeAguapluvialCaptada: [Double] = []
-    var volumeDisponivelReservatorioPosCaptacaoPreConsumo: [Double] = []
-    var volumeReservatorioPosConsumo: [Double] = []
-    var potencialDeAtendimentoDaDemanda: [Double] = []
+    @ObservedObject var inputs = InserirDadosViewModel.shared
     
     //funcoes calculo do mes
     func demandaAguaPluvialMensal(percentualSunstituicao: Double) -> Double {
@@ -59,8 +56,8 @@ class CalculosReservatorios: ObservableObject {
     }
     
     //calculo das linhas
-    func calculosDoMes(index: Int, precitacao: [Double], volumeReservatorio: Double, percentual: Double) -> DadosConsumoMes {
-        let volumeDeAguapluvialCaptada = volumeCapatadoNosMeses(precipitacaoDoMes: precitacao[index])
+    func calculosDoMes(index: Int, volumeReservatorio: Double, percentual: Double) -> DadosConsumoMes {
+        let volumeDeAguapluvialCaptada = volumeCapatadoNosMeses(precipitacaoDoMes: precipitacaoMensal[index])
         let volumeDisponivelReservatorioPosCaptacaoPreConsumo1: Double
         if index == 0 {
             volumeDisponivelReservatorioPosCaptacaoPreConsumo1 = volumeDisponivelReservatorioPosCaptacaoPreConsumo(volumeReservatorio: volumeReservatorio,
@@ -69,7 +66,6 @@ class CalculosReservatorios: ObservableObject {
         } else {
             volumeDisponivelReservatorioPosCaptacaoPreConsumo1 = volumeDisponivelReservatorioPosCaptacaoPreConsumo(volumeReservatorio: volumeReservatorio,
                                                                                                                   volumeReservatorioPosConsumo: calculosDoMes(index: index - 1,
-                                                                                                                                                              precitacao: precitacao,
                                                                                                                                                               volumeReservatorio: volumeReservatorio,
                                                                                                                                                               percentual: percentual).volumeReservatorioPosConsumo,
                                                                                                                   volumeCaptado: volumeDeAguapluvialCaptada)
