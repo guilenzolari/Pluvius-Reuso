@@ -139,10 +139,10 @@
 		F295EC252BE55B58005DAC05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */,
 				F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */,
 				F295EC282BE5680F005DAC05 /* calculoOPEX.swift */,
 				F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */,
-				F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,6 +371,8 @@
 				DEVELOPMENT_TEAM = 8JTQ9M4J69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Pluvius;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -400,6 +402,8 @@
 				DEVELOPMENT_TEAM = 8JTQ9M4J69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Pluvius;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

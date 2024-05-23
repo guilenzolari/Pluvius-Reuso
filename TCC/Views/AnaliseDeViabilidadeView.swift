@@ -26,6 +26,14 @@ struct AnaliseDeViabilidadeView: View {
                 Text("Simulação 1: 20% Substituição")
                     .font(.title2)
                 
+//                Text("volumeDeAguapluvialCaptada: \(dadosSimulacao.volumeDeAguapluvialCaptada)")
+//                Text("volumeDisponivelReservatorioPosCaptacaoPreConsumo: \(dadosSimulacao.volumeDisponivelReservatorioPosCaptacaoPreConsumo)")
+//                Text("demandaDeAgua: \(dadosSimulacao.demandaDeAgua)")
+//                Text("volumeReservatorioPosConsumo: \(dadosSimulacao.volumeReservatorioPosConsumo)")
+//                Text("volumeConsumido: \(dadosSimulacao.volumeConsumido)")
+//                Text("potencialDeAtendimentoDaDemanda: \(dadosSimulacao.potencialDeAtendimentoDaDemanda)")
+
+                
             }.navigationTitle(Text("Analise de Viabilidade"))
                 .navigationBarTitleDisplayMode(.inline)
         }
