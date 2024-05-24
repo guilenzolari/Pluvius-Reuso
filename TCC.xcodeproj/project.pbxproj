@@ -24,8 +24,9 @@
 		F27EDB812BFD78E300368CE7 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB802BFD78E300368CE7 /* Onboarding3.swift */; };
 		F27EDB832BFD78ED00368CE7 /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB822BFD78ED00368CE7 /* Onboarding4.swift */; };
 		F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */; };
+		F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */; };
 		F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */; };
-		F295EC292BE5680F005DAC05 /* calculoOPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC282BE5680F005DAC05 /* calculoOPEX.swift */; };
+		F295EC292BE5680F005DAC05 /* CalculoOPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC282BE5680F005DAC05 /* CalculoOPEX.swift */; };
 		F295EC2B2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +49,9 @@
 		F27EDB802BFD78E300368CE7 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		F27EDB822BFD78ED00368CE7 /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
 		F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+GetSize.swift"; sourceTree = "<group>"; };
+		F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundedTwoDecimal.swift"; sourceTree = "<group>"; };
 		F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoCAPEX.swift; sourceTree = "<group>"; };
-		F295EC282BE5680F005DAC05 /* calculoOPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculoOPEX.swift; sourceTree = "<group>"; };
+		F295EC282BE5680F005DAC05 /* CalculoOPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoOPEX.swift; sourceTree = "<group>"; };
 		F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoAnaliseTecnicoEconomica.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */,
+				F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,7 +144,7 @@
 			children = (
 				F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */,
 				F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */,
-				F295EC282BE5680F005DAC05 /* calculoOPEX.swift */,
+				F295EC282BE5680F005DAC05 /* CalculoOPEX.swift */,
 				F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */,
 			);
 			path = Models;
@@ -218,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27EDB7D2BFD77D400368CE7 /* Onboarding1.swift in Sources */,
-				F295EC292BE5680F005DAC05 /* calculoOPEX.swift in Sources */,
+				F295EC292BE5680F005DAC05 /* CalculoOPEX.swift in Sources */,
 				F27EDB812BFD78E300368CE7 /* Onboarding3.swift in Sources */,
 				F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */,
 				F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */,
@@ -228,6 +231,7 @@
 				F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */,
 				F27EDB7B2BFD728C00368CE7 /* OnboardingViewModel.swift in Sources */,
 				F27EDB832BFD78ED00368CE7 /* Onboarding4.swift in Sources */,
+				F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */,
 				F24E13ED2BD8530200ED1579 /* InformacoesView.swift in Sources */,
 				F24E13F02BD8545000ED1579 /* MainView.swift in Sources */,
 				F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */,

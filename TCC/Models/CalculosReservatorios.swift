@@ -21,7 +21,7 @@ class CalculosReservatorios: ObservableObject {
     //funcoes calculo do mes
     func demandaAguaPluvialMensal(percentualSunstituicao: Double) -> Double {
         var demandaAguaPluvialMensal: Double = 0
-        if inputs.quantidadeMoradoresDaResidencia == 0 {
+        if inputs.quantidadeMoradoresDaResidencia != 0 {
             demandaAguaPluvialMensal = inputs.quantidadeMoradoresDaResidencia * consumoMedioPessoa * percentualSunstituicao * (365/12)
             return demandaAguaPluvialMensal
         } else {
@@ -40,11 +40,8 @@ class CalculosReservatorios: ObservableObject {
     }
     
     func volumeReservatorioPosConsumo(volumeDisponivelReservatorioPosCaptacaoPreConsumo: Double, demandaAguaPluvialMensal: Double) -> Double {
-        if volumeDisponivelReservatorioPosCaptacaoPreConsumo - demandaAguaPluvialMensal < 0 {
-            return 0
-        } else {
-            return volumeDisponivelReservatorioPosCaptacaoPreConsumo - demandaAguaPluvialMensal
-        }
+        let volumeReservatorioPosConsumo = volumeDisponivelReservatorioPosCaptacaoPreConsumo - demandaAguaPluvialMensal
+        return max(0, volumeReservatorioPosConsumo)
     }
     
     func volumeDeAguaConsumido(volumeDisponivelReservatorioPosCaptacaoPreConsumo: Double, demandaAguaPluvialMensal: Double) -> Double {
@@ -71,23 +68,17 @@ class CalculosReservatorios: ObservableObject {
                                                                                                                   volumeCaptado: volumeDeAguapluvialCaptada)
         }
         let demandaDeAgua = demandaAguaPluvialMensal(percentualSunstituicao: percentual)
-        let volumeReservatorioPosConsumo = volumeReservatorioPosConsumo(volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1,
-                                                                        demandaAguaPluvialMensal: demandaDeAgua)
-        let volumeDeAguaConsumido = volumeDeAguaConsumido(volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeReservatorioPosConsumo,
-                                                          demandaAguaPluvialMensal: demandaDeAgua)
+        let volumeReservatorioPosConsumo = volumeReservatorioPosConsumo(volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1, demandaAguaPluvialMensal: demandaDeAgua)
+        let volumeDeAguaConsumido = volumeDeAguaConsumido(volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1, demandaAguaPluvialMensal: demandaDeAgua)
         let potencialDeAtendimentoDaDemanda = potencialDeAtendimentoDaDemanda(volumeDeAguaConsumido: volumeDeAguaConsumido, demandaAguaPluvialMensal: demandaDeAgua)
         
         return DadosConsumoMes(volumeDeAguapluvialCaptada: volumeDeAguapluvialCaptada,
-                       volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1,
-                       demandaDeAgua: demandaDeAgua,
-                       volumeReservatorioPosConsumo: volumeReservatorioPosConsumo,
-                       volumeConsumido: volumeDeAguaConsumido,
-                       potencialDeAtendimentoDaDemanda: potencialDeAtendimentoDaDemanda)
+                               volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1,
+                               demandaDeAgua: demandaDeAgua,
+                               volumeReservatorioPosConsumo: volumeReservatorioPosConsumo,
+                               volumeConsumido: volumeDeAguaConsumido,
+                               potencialDeAtendimentoDaDemanda: potencialDeAtendimentoDaDemanda)
     }
-    
-//    func calculosDoAno(index: Int, precitacao: [Double], volumeReservatorio: Double, percentual: Double) -> SumarioDados {
-//        
-//    }
 }
 
 struct DadosConsumoMes {

@@ -35,21 +35,22 @@ struct AnaliseDeViabilidadeView: View {
                 Text("Simulação 1: 30% Substituição")
                     .font(.title2)
                 
-                Text("volumeDeAguapluvialCaptada: \(dadosSimulacao.volumeDeAguapluvialCaptada)")
-                Text("volumeDisponivelReservatorioPosCaptacaoPreConsumo: \(dadosSimulacao.volumeDisponivelReservatorioPosCaptacaoPreConsumo)")
-                Text("demandaDeAgua: \(dadosSimulacao.demandaDeAgua)")
-                Text("volumeReservatorioPosConsumo: \(dadosSimulacao.volumeReservatorioPosConsumo)")
-                Text("volumeConsumido: \(dadosSimulacao.volumeConsumido)")
-                Text("potencialDeAtendimentoDaDemanda: \(dadosSimulacao.potencialDeAtendimentoDaDemanda)")
+                Text("volumeDeAguapluvialCaptada: \(String(format: "%.2f", dadosSimulacao.volumeDeAguapluvialCaptada.roundedTwoDecimal()))")
+                Text("volumeDisponivelReservatorioPosCaptacaoPreConsumo: \(String(format: "%.2f", dadosSimulacao.volumeDisponivelReservatorioPosCaptacaoPreConsumo.roundedTwoDecimal()))")
+                Text("demandaDeAgua: \(String(format: "%.2f", dadosSimulacao.demandaDeAgua.roundedTwoDecimal()))")
+                Text("volumeReservatorioPosConsumo: \(String(format: "%.2f", dadosSimulacao.volumeReservatorioPosConsumo.roundedTwoDecimal()))")
+                Text("volumeConsumido: \(String(format: "%.2f", dadosSimulacao.volumeConsumido.roundedTwoDecimal()))")
+                Text("potencialDeAtendimentoDaDemanda: \(String(format: "%.2f", dadosSimulacao.potencialDeAtendimentoDaDemanda.roundedTwoDecimal() * 100))%")
+
 
                 
             }.navigationTitle(Text("Analise de Viabilidade"))
                 .navigationBarTitleDisplayMode(.inline)
         }.onAppear{
             dadosSimulacao = calculosReservatorios.calculosDoMes(
-                index: 0,
-                volumeReservatorio: 1000,
-                percentual: 0.3)
+                index: 7,
+                volumeReservatorio: 10000,
+                percentual: 0.4)
         }
     }
 }

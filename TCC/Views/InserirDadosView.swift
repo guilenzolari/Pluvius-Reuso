@@ -12,7 +12,7 @@ struct InserirDadosView: View {
         formatter.numberStyle = .decimal
         return formatter
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
