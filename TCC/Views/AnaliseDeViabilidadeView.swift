@@ -18,39 +18,33 @@ struct AnaliseDeViabilidadeView: View {
     let custoReservatorio = 1500
     var calculosReservatorios = CalculosReservatorios()
     
-    @ObservedObject var inputs = InserirDadosViewModel.shared    
-    @State var dadosSimulacao: DadosConsumoMes = DadosConsumoMes(
-         volumeDeAguapluvialCaptada: 0,
-         volumeDisponivelReservatorioPosCaptacaoPreConsumo: 0,
-         demandaDeAgua: 0,
-         volumeReservatorioPosConsumo: 0,
-         volumeConsumido: 0,
-         potencialDeAtendimentoDaDemanda: 0
-     )
+    @ObservedObject var inputs = InserirDadosViewModel.shared
+    @State var dadosSimulacao: SumarioDados = SumarioDados(
+        percentual: "0",
+        capacidadeReservatorio: 0,
+        demandaAguaPluvialMensal: 0,
+        potencialMedioDeAtendimentoDaDemanda: 0,
+        mesesAtendidosParcialmente: 0,
+        mesesAtendidosCompletamente: 0,
+        mesesNaoAtendidos: 0)
     
     var body: some View {
         NavigationView {
             VStack {
-                
                 Text("Simulação 1: 30% Substituição")
                     .font(.title2)
-                
-                Text("volumeDeAguapluvialCaptada: \(String(format: "%.2f", dadosSimulacao.volumeDeAguapluvialCaptada.roundedTwoDecimal()))")
-                Text("volumeDisponivelReservatorioPosCaptacaoPreConsumo: \(String(format: "%.2f", dadosSimulacao.volumeDisponivelReservatorioPosCaptacaoPreConsumo.roundedTwoDecimal()))")
-                Text("demandaDeAgua: \(String(format: "%.2f", dadosSimulacao.demandaDeAgua.roundedTwoDecimal()))")
-                Text("volumeReservatorioPosConsumo: \(String(format: "%.2f", dadosSimulacao.volumeReservatorioPosConsumo.roundedTwoDecimal()))")
-                Text("volumeConsumido: \(String(format: "%.2f", dadosSimulacao.volumeConsumido.roundedTwoDecimal()))")
-                Text("potencialDeAtendimentoDaDemanda: \(String(format: "%.2f", dadosSimulacao.potencialDeAtendimentoDaDemanda.roundedTwoDecimal() * 100))%")
-
-
+                Text("percentual: " + dadosSimulacao.percentual)
+                Text("capacidadeReservatorio: \(String(format: "%.2f", dadosSimulacao.capacidadeReservatorio))")
+                Text("demandaAguaPluvialMensal: \(String(format: "%.2f", dadosSimulacao.demandaAguaPluvialMensal))")
+                Text("potencialMedioDeAtendimentoDaDemanda: \(String(format: "%.2f", dadosSimulacao.potencialMedioDeAtendimentoDaDemanda))")
+                Text("mesesAtendidosParcialmente: \(String(format: "%.2f", dadosSimulacao.mesesAtendidosParcialmente))")
+                Text("mesesAtendidosCompletamente: \(String(format: "%.2f", dadosSimulacao.mesesAtendidosCompletamente))")
+                Text("mesesNaoAtendidos: \(String(format: "%.2f", dadosSimulacao.mesesNaoAtendidos))")
                 
             }.navigationTitle(Text("Analise de Viabilidade"))
                 .navigationBarTitleDisplayMode(.inline)
         }.onAppear{
-            dadosSimulacao = calculosReservatorios.calculosDoMes(
-                index: 7,
-                volumeReservatorio: 10000,
-                percentual: 0.4)
+            dadosSimulacao = calculosReservatorios.calculosDeTodosMeses(percentual: 0.35, volumeReservatorio: 600)
         }
     }
 }

@@ -19,10 +19,10 @@
 		F27EDB772BFD656100368CE7 /* CalculosReservatoriosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB762BFD656100368CE7 /* CalculosReservatoriosViewModel.swift */; };
 		F27EDB792BFD727500368CE7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB782BFD727500368CE7 /* OnboardingView.swift */; };
 		F27EDB7B2BFD728C00368CE7 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB7A2BFD728C00368CE7 /* OnboardingViewModel.swift */; };
-		F27EDB7D2BFD77D400368CE7 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB7C2BFD77D400368CE7 /* Onboarding1.swift */; };
-		F27EDB7F2BFD78BE00368CE7 /* Onborading2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB7E2BFD78BE00368CE7 /* Onborading2.swift */; };
-		F27EDB812BFD78E300368CE7 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB802BFD78E300368CE7 /* Onboarding3.swift */; };
-		F27EDB832BFD78ED00368CE7 /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB822BFD78ED00368CE7 /* Onboarding4.swift */; };
+		F27EDB7D2BFD77D400368CE7 /* Onboarding1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB7C2BFD77D400368CE7 /* Onboarding1View.swift */; };
+		F27EDB7F2BFD78BE00368CE7 /* Onborading2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB7E2BFD78BE00368CE7 /* Onborading2View.swift */; };
+		F27EDB812BFD78E300368CE7 /* Onboarding3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB802BFD78E300368CE7 /* Onboarding3View.swift */; };
+		F27EDB832BFD78ED00368CE7 /* Onboarding4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB822BFD78ED00368CE7 /* Onboarding4View.swift */; };
 		F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */; };
 		F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */; };
 		F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */; };
@@ -44,10 +44,10 @@
 		F27EDB762BFD656100368CE7 /* CalculosReservatoriosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculosReservatoriosViewModel.swift; sourceTree = "<group>"; };
 		F27EDB782BFD727500368CE7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F27EDB7A2BFD728C00368CE7 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		F27EDB7C2BFD77D400368CE7 /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
-		F27EDB7E2BFD78BE00368CE7 /* Onborading2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onborading2.swift; sourceTree = "<group>"; };
-		F27EDB802BFD78E300368CE7 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
-		F27EDB822BFD78ED00368CE7 /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
+		F27EDB7C2BFD77D400368CE7 /* Onboarding1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1View.swift; sourceTree = "<group>"; };
+		F27EDB7E2BFD78BE00368CE7 /* Onborading2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onborading2View.swift; sourceTree = "<group>"; };
+		F27EDB802BFD78E300368CE7 /* Onboarding3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3View.swift; sourceTree = "<group>"; };
+		F27EDB822BFD78ED00368CE7 /* Onboarding4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4View.swift; sourceTree = "<group>"; };
 		F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+GetSize.swift"; sourceTree = "<group>"; };
 		F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundedTwoDecimal.swift"; sourceTree = "<group>"; };
 		F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoCAPEX.swift; sourceTree = "<group>"; };
@@ -108,10 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				F27EDB782BFD727500368CE7 /* OnboardingView.swift */,
-				F27EDB7C2BFD77D400368CE7 /* Onboarding1.swift */,
-				F27EDB7E2BFD78BE00368CE7 /* Onborading2.swift */,
-				F27EDB802BFD78E300368CE7 /* Onboarding3.swift */,
-				F27EDB822BFD78ED00368CE7 /* Onboarding4.swift */,
+				F27EDB7C2BFD77D400368CE7 /* Onboarding1View.swift */,
+				F27EDB7E2BFD78BE00368CE7 /* Onborading2View.swift */,
+				F27EDB802BFD78E300368CE7 /* Onboarding3View.swift */,
+				F27EDB822BFD78ED00368CE7 /* Onboarding4View.swift */,
 				F24E13EF2BD8545000ED1579 /* MainView.swift */,
 				F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */,
 				F24E13EA2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift */,
@@ -220,9 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F27EDB7D2BFD77D400368CE7 /* Onboarding1.swift in Sources */,
+				F27EDB7D2BFD77D400368CE7 /* Onboarding1View.swift in Sources */,
 				F295EC292BE5680F005DAC05 /* CalculoOPEX.swift in Sources */,
-				F27EDB812BFD78E300368CE7 /* Onboarding3.swift in Sources */,
+				F27EDB812BFD78E300368CE7 /* Onboarding3View.swift in Sources */,
 				F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */,
 				F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */,
 				F27EDB772BFD656100368CE7 /* CalculosReservatoriosViewModel.swift in Sources */,
@@ -230,12 +230,12 @@
 				F24E13EB2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift in Sources */,
 				F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */,
 				F27EDB7B2BFD728C00368CE7 /* OnboardingViewModel.swift in Sources */,
-				F27EDB832BFD78ED00368CE7 /* Onboarding4.swift in Sources */,
+				F27EDB832BFD78ED00368CE7 /* Onboarding4View.swift in Sources */,
 				F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */,
 				F24E13ED2BD8530200ED1579 /* InformacoesView.swift in Sources */,
 				F24E13F02BD8545000ED1579 /* MainView.swift in Sources */,
 				F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */,
-				F27EDB7F2BFD78BE00368CE7 /* Onborading2.swift in Sources */,
+				F27EDB7F2BFD78BE00368CE7 /* Onborading2View.swift in Sources */,
 				F27EDB792BFD727500368CE7 /* OnboardingView.swift in Sources */,
 				F295EC2B2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift in Sources */,
 				F24E13DD2BD8525F00ED1579 /* TCCApp.swift in Sources */,
