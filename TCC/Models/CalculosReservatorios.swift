@@ -15,7 +15,7 @@ class CalculosReservatorios: ObservableObject {
     let coeficienteAproveitamento: Double = 0.8
     let precipitacaoMensal: [Double] = [178.1, 258.8, 81.3, 12.2, 23.4, 27.1, 0, 15.5, 6.6, 121.4, 83.8, 168.1, 312.9, 168.4, 130.8, 40.1, 39.4, 15.7, 8.9, 28.2, 89.7, 120.4, 142.5, 324.1]
     let percentualDeSubstituicao = [0.25, 0.3, 0.35, 0.4, 0.45]
-    let volumesTanques = [600, 1000, 1600, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
+    let volumesTanques: [Double] = [600, 1000, 1600, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     
     @ObservedObject var inputs = InserirDadosViewModel.shared
     
@@ -98,6 +98,15 @@ class CalculosReservatorios: ObservableObject {
                             mesesNaoAtendidos: mesesNaoAtendidos(dadosMeses: dadosMeses))
     }
     
+    func simulacoesVariandoVolumes(percentual: Double) -> [SumarioDados] {
+        var simulacoesVariandoVolumes: [SumarioDados] = []
+        for volume in volumesTanques {
+            let calculosDeTodosMeses = calculosDeTodosMeses(percentual: percentual, volumeReservatorio: volume)
+            simulacoesVariandoVolumes.append(calculosDeTodosMeses)
+        }
+        return simulacoesVariandoVolumes
+    }
+    
     func potencialMedioDeAtendimentoDaDemanda(dadosMeses: [DadosConsumoMes]) -> Double {
         var valores: [Double] = []
         for index in 0...dadosMeses.count-1 {
@@ -154,7 +163,8 @@ struct DadosConsumoMes {
     var potencialDeAtendimentoDaDemanda: Double
 }
 
-struct SumarioDados {
+struct SumarioDados: Identifiable {
+    var id = UUID()
     var percentual: String
     var capacidadeReservatorio: Double
     var demandaAguaPluvialMensal: Double

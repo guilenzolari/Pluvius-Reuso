@@ -15,7 +15,6 @@ final class InserirDadosViewModel: ObservableObject {
     @Published var tarifaDaAgua: Double = 0.0 // R$/m3
     @Published var consumoMediaDaResidencia: Double = 0.0 // m3/mes
     @Published var quantidadeMoradoresDaResidencia = 0.0
-    @Published var volumeMaximoTanque = 0.0
     
     private init(){}
     

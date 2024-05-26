@@ -37,11 +37,6 @@ struct InserirDadosView: View {
                             .disabled(inputs.consumoMediaDaResidencia != 0)
                     }
                     
-                    Section(header: Text("Armazenamento"), footer: Text("O volume máximo deve considerar o custo, área de instalação e demanda.")) {
-                        TextField("Volume máximo do tanque (m³)", value: $inputs.volumeMaximoTanque, formatter: numberFormatter)
-                            .keyboardType(.numberPad)
-                    }
-                    
                     Section {
                         Button(action: {
                             selectedTab = 1
