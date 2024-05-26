@@ -74,9 +74,7 @@ struct AnaliseDeViabilidadeView: View {
                     Text("Simulação 4: Substituição de \(dadosSimulacao40.first?.percentual ?? "0") de água potável por água de reúso").padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao40)
-
                 }
-
             }
             .navigationTitle(Text("Analise de Viabilidade"))
             .navigationBarTitleDisplayMode(.inline)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State var selectedTab: Int = 0
+    @ObservedObject var inputs = InserirDadosViewModel.shared
     
     var body: some View {
         TabView(selection: $selectedTab){
@@ -26,6 +27,10 @@ struct MainView: View {
                 .tabItem {
                     Label("Informações", systemImage: "book")}
                 .tag(2)
+        }.onChange(of: selectedTab) { newTab in
+            if newTab == 1 && !inputs.isTextFieldFilled() {
+                selectedTab = 0
+            }
         }
     }
 }
