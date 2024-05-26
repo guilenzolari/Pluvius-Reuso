@@ -35,8 +35,6 @@ struct TableView: View {
                             Divider()
                         }
                     }
-                }.onAppear {
-                    dadosSimulacao = calculosReservatorios.simulacoesVariandoVolumes(percentual: 0.35)
                 }
             }
 //        }
