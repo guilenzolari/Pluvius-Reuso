@@ -9,7 +9,6 @@ struct AnaliseDeViabilidadeView: View {
     let potencialAtendimentoMedio = 13.4
     let nMesesAtendidos = 12
     let custoReservatorio = 1500
-    let percentualDeSubstituicao = [0.25, 0.3, 0.35, 0.4]
     
     var calculosReservatorios = CalculosReservatorios()
 
@@ -57,34 +56,43 @@ struct AnaliseDeViabilidadeView: View {
 
     var body: some View {
         NavigationView {
-            ScrollView(.vertical){
-                VStack {
-                    Text("Simulação 1: Substituição de \(dadosSimulacao25.first?.percentual ?? "0") de água potável por água de reúso").padding()
+            ScrollView {
+                LazyVStack {
+                    Text("Simulação 1: Substituição de 25% de água potável por água de reúso")
+                        .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao25)
+                    Divider()
                     
-                    Text("Simulação 2: Substituição de \(dadosSimulacao30.first?.percentual ?? "0") de água potável por água de reúso").padding()
+                    Text("Simulação 2: Substituição de 30% de água potável por água de reúso")
+                        .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao30)
+                    Divider()
+
                     
-                    Text("Simulação 3: Substituição de \(dadosSimulacao35.first?.percentual ?? "0") de água potável por água de reúso").padding()
+                    Text("Simulação 3: Substituição de 35% de água potável por água de reúso")
+                        .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao35)
+                    Divider()
+
                     
-                    Text("Simulação 4: Substituição de \(dadosSimulacao40.first?.percentual ?? "0") de água potável por água de reúso").padding()
+                    Text("Simulação 4: Substituição de 40% de água potável por água de reúso")
+                        .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao40)
+                    Divider()
                 }
             }
-            .navigationTitle(Text("Analise de Viabilidade"))
+            .navigationTitle(Text("Análise de Viabilidade"))
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 dadosSimulacao25 = calculosReservatorios.simulacoesVariandoVolumes(percentual: 0.25)
                 dadosSimulacao30 = calculosReservatorios.simulacoesVariandoVolumes(percentual: 0.3)
                 dadosSimulacao35 = calculosReservatorios.simulacoesVariandoVolumes(percentual: 0.35)
                 dadosSimulacao40 = calculosReservatorios.simulacoesVariandoVolumes(percentual: 0.4)
-
-            }
+        }
         }
     }
 }

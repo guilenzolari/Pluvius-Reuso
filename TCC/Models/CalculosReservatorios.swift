@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import Accelerate
 
 class CalculosReservatorios: ObservableObject {
     
@@ -144,7 +143,7 @@ class CalculosReservatorios: ObservableObject {
     func mesesNaoAtendidos(dadosMeses: [DadosConsumoMes]) -> Double {
         var count: Double = 0
         for dados in dadosMeses {
-            if dados.potencialDeAtendimentoDaDemanda < 1/100 {
+            if dados.potencialDeAtendimentoDaDemanda < 5/100 {
                 count += 1
             }
         }

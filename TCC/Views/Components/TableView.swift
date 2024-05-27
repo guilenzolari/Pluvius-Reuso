@@ -1,4 +1,3 @@
-import Foundation
 import SwiftUI
 
 struct TableView: View {
@@ -6,18 +5,17 @@ struct TableView: View {
     @Binding var dadosSimulacao: [SumarioDados]
     var calculosReservatorios = CalculosReservatorios()
     
-    var body: some View{
-//        List {
-            // títulos
-            ScrollView(.horizontal, showsIndicators: false) {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            VStack {
                 Grid {
                     GridRow {
-                        ForEach(titles, id: \.self){title in
+                        ForEach(titles, id: \.self) { title in
                             Text(title)
+                                .bold()
+                                .multilineTextAlignment(.center)
                         }
                     }
-                    .bold()
-                    .multilineTextAlignment(.center)
                     Divider()
                     // conteúdo
                     ForEach(dadosSimulacao.indices, id: \.self) { index in
@@ -25,11 +23,15 @@ struct TableView: View {
                         GridRow {
                             Text("\(String(format: "%.2f", dado.demandaAguaPluvialMensal))")
                             Text("\(String(format: "%.0f", dado.capacidadeReservatorio))")
-                            Text("\(String(format: "%.2f", dado.potencialMedioDeAtendimentoDaDemanda*100))%")
+                            Text("\(String(format: "%.2f", dado.potencialMedioDeAtendimentoDaDemanda * 100))%")
                             Text("\(String(format: "%.2f", dado.mesesAtendidosCompletamente))")
                             Text("\(String(format: "%.2f", dado.mesesAtendidosParcialmente))")
                             Text("\(String(format: "%.2f", dado.mesesNaoAtendidos))")
-
+                            NavigationLink {
+                                DetalhesSimulacaoView()
+                            } label: {
+                                Text(Image(systemName: "chevron.right"))
+                            }
                         }
                         if index != dadosSimulacao.indices.last {
                             Divider()
@@ -37,6 +39,6 @@ struct TableView: View {
                     }
                 }
             }
-//        }
+        }
     }
 }

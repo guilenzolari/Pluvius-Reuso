@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */; };
+		F20784012C0508D900AB27A1 /* DetalhesSimulacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784002C0508D900AB27A1 /* DetalhesSimulacaoView.swift */; };
+		F20784032C050C6700AB27A1 /* LinhaTabelaHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */; };
+		F20784052C05155B00AB27A1 /* View+PaddingSides.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784042C05155B00AB27A1 /* View+PaddingSides.swift */; };
 		F24E13DD2BD8525F00ED1579 /* TCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13DC2BD8525F00ED1579 /* TCCApp.swift */; };
 		F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */; };
 		F24E13E12BD8526000ED1579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24E13E02BD8526000ED1579 /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculosReservatorios.swift; sourceTree = "<group>"; };
+		F20784002C0508D900AB27A1 /* DetalhesSimulacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesSimulacaoView.swift; sourceTree = "<group>"; };
+		F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaTabelaHorizontal.swift; sourceTree = "<group>"; };
+		F20784042C05155B00AB27A1 /* View+PaddingSides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PaddingSides.swift"; sourceTree = "<group>"; };
 		F24E13D92BD8525F00ED1579 /* TCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24E13DC2BD8525F00ED1579 /* TCCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCApp.swift; sourceTree = "<group>"; };
 		F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserirDadosView.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 				F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */,
 				F24E13EA2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift */,
 				F24E13EC2BD8530200ED1579 /* InformacoesView.swift */,
+				F20784002C0508D900AB27A1 /* DetalhesSimulacaoView.swift */,
 				F2EA8D9D2C02E77600E48929 /* Components */,
 			);
 			path = Views;
@@ -119,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */,
+				F20784042C05155B00AB27A1 /* View+PaddingSides.swift */,
 				F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */,
 			);
 			path = Extensions;
@@ -147,10 +155,11 @@
 			isa = PBXGroup;
 			children = (
 				F27EDB7C2BFD77D400368CE7 /* Onboarding1View.swift */,
-				F2EA8D9B2C02E66400E48929 /* TableView.swift */,
 				F27EDB7E2BFD78BE00368CE7 /* Onborading2View.swift */,
+				F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */,
 				F27EDB802BFD78E300368CE7 /* Onboarding3View.swift */,
 				F27EDB822BFD78ED00368CE7 /* Onboarding4View.swift */,
+				F2EA8D9B2C02E66400E48929 /* TableView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -228,7 +237,10 @@
 				F27EDB7D2BFD77D400368CE7 /* Onboarding1View.swift in Sources */,
 				F2EA8D9C2C02E66400E48929 /* TableView.swift in Sources */,
 				F295EC292BE5680F005DAC05 /* CalculoOPEX.swift in Sources */,
+				F20784012C0508D900AB27A1 /* DetalhesSimulacaoView.swift in Sources */,
 				F27EDB812BFD78E300368CE7 /* Onboarding3View.swift in Sources */,
+				F20784052C05155B00AB27A1 /* View+PaddingSides.swift in Sources */,
+				F20784032C050C6700AB27A1 /* LinhaTabelaHorizontal.swift in Sources */,
 				F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */,
 				F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */,
 				F24E13F22BD8839500ED1579 /* InserirDadosViewModel.swift in Sources */,
