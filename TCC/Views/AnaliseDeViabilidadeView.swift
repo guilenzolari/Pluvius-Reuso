@@ -58,27 +58,28 @@ struct AnaliseDeViabilidadeView: View {
         NavigationView {
             ScrollView {
                 LazyVStack {
-                    Text("Simulação 1: Substituição de 25% de água potável por água de reúso")
+                    
+                    Text("Simulação 1: Substituição de 25% de água potável por água de reúso com demanda de Água Pluvial de \(String(format: "%.2f", dadosSimulacao25[0].demandaAguaPluvialMensal))L")
                         .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao25)
                     Divider()
                     
-                    Text("Simulação 2: Substituição de 30% de água potável por água de reúso")
+                    Text("Simulação 2: Substituição de 30% de água potável por água de reúso com demanda de Água Pluvial de \(String(format: "%.2f", dadosSimulacao30[0].demandaAguaPluvialMensal))L")
                         .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao30)
                     Divider()
 
                     
-                    Text("Simulação 3: Substituição de 35% de água potável por água de reúso")
+                    Text("Simulação 3: Substituição de 35% de água potável por água de reúso com demanda de Água Pluvial de \(String(format: "%.2f", dadosSimulacao35[0].demandaAguaPluvialMensal))L")
                         .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao35)
                     Divider()
 
                     
-                    Text("Simulação 4: Substituição de 40% de água potável por água de reúso")
+                    Text("Simulação 4: Substituição de 40% de água potável por água de reúso com demanda de Água Pluvial de \(String(format: "%.2f", dadosSimulacao40[0].demandaAguaPluvialMensal))L")
                         .padding()
                         .font(.title2)
                     TableView(dadosSimulacao: $dadosSimulacao40)
