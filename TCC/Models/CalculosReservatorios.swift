@@ -162,7 +162,7 @@ struct DadosConsumoMes {
     var potencialDeAtendimentoDaDemanda: Double
 }
 
-struct SumarioDados: Identifiable {
+struct SumarioDados: Identifiable, Hashable {
     var id = UUID()
     var percentual: String
     var capacidadeReservatorio: Double
