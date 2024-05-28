@@ -30,21 +30,22 @@ struct InserirDadosView: View {
                                 .disabled(inputs.consumoMediaDaResidencia != 0)
                         }
                         
+                        
                         Section {
-                            Button(action: {
-                                selectedTab = 1
-                            }, label: {
+                            NavigationLink {
+                                EscolhaDePerfilView(selectedTab: $selectedTab)
+                            } label: {
                                 HStack {
                                     Spacer()
-                                    Text("Concluir")
+                                    Text("Visualizar simulações")
                                     Spacer()
                                 }
-                            }).disabled(!inputs.isTextFieldFilled())
+                            }.disabled(!inputs.isTextFieldFilled())
                         }
                     }
                 }
-                .navigationTitle(Text("Insira os dados da sua residência"))
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(Text("Insira os dados da sua residência"))
+        .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

@@ -2,7 +2,7 @@ import SwiftUI
 import Charts
 
 struct AnaliseDeViabilidadeView: View {
-    @Binding var selectedTab: Int
+   // @Binding var selectedTab: Int
     let percentualSubstituido = 30
     let demandaAguaPluvialMensal = 4270.5
     let capacidadeReservatorio = 600
@@ -13,16 +13,14 @@ struct AnaliseDeViabilidadeView: View {
     var calculosReservatorios = CalculosReservatorios()
 
     @ObservedObject var inputs = InserirDadosViewModel.shared
-    @State var dadosSimulacoes: [[SumarioDados]] = []
+    @State var dadosSimulacoes: [[SumarioDados]] = [[SumarioDados(percentual: "3.0", capacidadeReservatorio: 2, demandaAguaPluvialMensal: 5, potencialMedioDeAtendimentoDaDemanda: 4, mesesAtendidosParcialmente: 2, mesesAtendidosCompletamente: 2, mesesNaoAtendidos: 5)]]
 
     var body: some View {
         NavigationView {
             ScrollView {
+                
                 LazyVStack {
                     ForEach($dadosSimulacoes, id: \.self) { dado in
-//                        Text("Simulação 1: Substituição de 25% de água potável por água de reúso com demanda de Água Pluvial de \(String(format: "%.2f", dado[0].demandaAguaPluvialMensal)) L")
-//                            .padding()
-//                            .font(.title2)
                         TableView(dadosSimulacao: dado)
                         Divider()
                     }

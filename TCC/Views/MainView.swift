@@ -18,19 +18,10 @@ struct MainView: View {
                     Label("Dados", systemImage: "square.and.arrow.down")}
                 .tag(0)
 
-            AnaliseDeViabilidadeView(selectedTab: $selectedTab)
+            TemasDidaticosView(selectedTab: $selectedTab)
                 .tabItem {
-                    Label("Análise de Viabilidade", systemImage: "chart.line.uptrend.xyaxis")}
+                    Label("Temas Didáticos", systemImage: "book")}
                 .tag(1)
-
-            InformacoesView(selectedTab: $selectedTab)
-                .tabItem {
-                    Label("Informações", systemImage: "book")}
-                .tag(2)
-        }.onChange(of: selectedTab) { newTab in
-            if newTab == 1 && !inputs.isTextFieldFilled() {
-                selectedTab = 0
-            }
         }
     }
 }
