@@ -31,7 +31,6 @@ struct EscolhaDePerfilView: View {
                             HStack {
                                 Text("Prioriza o menor custo em detrimento da economia de água potável.")
                                     .font(.footnote)
-                                    .foregroundStyle(Color.gray)
                                 Spacer()
                             }.padding(.bottom)
                             
@@ -49,12 +48,13 @@ struct EscolhaDePerfilView: View {
                                         Text("Tempo de Retorno do Investimento: 3,5 anos")
                                         Spacer()
                                     }
-                                }.font(.footnote)
+                                }.font(.caption).bold()
                                 Spacer()
                             }
                         }
                     }
                 }
+                .listRowBackground(Color.green.opacity(0.2))
                 Section {
                     NavigationLink {
                         AnaliseDeViabilidadeView()
@@ -89,7 +89,7 @@ struct EscolhaDePerfilView: View {
                                         Text("Tempo de Retorno do Investimento: 3,5 anos")
                                         Spacer()
                                     }
-                                }.font(.footnote)
+                                }.font(.caption).bold()
                                     
 
                                 Spacer()
@@ -101,6 +101,7 @@ struct EscolhaDePerfilView: View {
                     }
 
                 }
+                .listRowBackground(Color.yellow.opacity(0.2))
                 Section {
                     NavigationLink {
                         AnaliseDeViabilidadeView()
@@ -134,7 +135,7 @@ struct EscolhaDePerfilView: View {
                                         Text("Tempo de Retorno do Investimento: 3,5 anos")
                                         Spacer()
                                     }
-                                }.font(.footnote)
+                                }.font(.caption).bold()
                                     
 
                                 Spacer()
@@ -146,6 +147,8 @@ struct EscolhaDePerfilView: View {
                     }
 
                 }
+                .listRowBackground(Color.blue.opacity(0.2))
+
             }
         } .navigationTitle(Text("Escolha o seu tipo de perfil"))
         .navigationBarTitleDisplayMode(.inline)
