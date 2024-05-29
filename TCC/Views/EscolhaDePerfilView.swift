@@ -19,6 +19,7 @@ struct EscolhaDePerfilView: View {
                         VStack{
                             HStack{
                                 Text("Economia de Dinheiro")
+                                Image(systemName: "dollarsign.circle")
                                 Spacer()
                             }.font(.title2)
                                 .bold()
@@ -107,6 +108,7 @@ struct EscolhaDePerfilView: View {
                         VStack{
                             HStack{
                                 Text("Economia de Água")
+                                Image(systemName: "drop")
                                 Spacer()
                             }.font(.title2)
                                 .bold()

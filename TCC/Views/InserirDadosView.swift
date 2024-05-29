@@ -30,7 +30,6 @@ struct InserirDadosView: View {
                                 .disabled(inputs.consumoMediaDaResidencia != 0)
                         }
                         
-                        
                         Section {
                             NavigationLink {
                                 EscolhaDePerfilView(selectedTab: $selectedTab)

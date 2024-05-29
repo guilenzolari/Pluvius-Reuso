@@ -14,7 +14,7 @@ struct TCCApp: App {
         WindowGroup {
             NavigationStack{
                 if isOnboarding{
-                    OnboardingView()
+                    OnboardingManagerView()
                 } else {
                     MainView()
                 }

@@ -1,31 +1,57 @@
-//
-//  OnboardingView.swift
-//  TCC
-//
-//  Created by Guilherme Ferreira Lenzolari on 21/05/24.
-//
-
 import SwiftUI
 
 struct OnboardingView: View {
-    @State private var currentTab = 0
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    @State private var isAnimating: Bool = false
+    let titulo: String
+    let texto: String
+    let imagem: String
+    let cor: Color
+    let mostrarBotaoComecar: Bool
     
     var body: some View {
-        TabView(selection: $currentTab) {
-            Onboarding1()
-                .tag(0)
-            Onborading2()
-                .tag(1)
-            Onboarding3()
-                .tag(2)
-            Onboarding4()
-                .tag(3)
+        ZStack {
+            cor
+                .opacity(0.4)
+                .ignoresSafeArea()
             
-        }.tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            VStack {
+                Text(titulo)
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .padding()
+                
+                Text(texto)
+                    .padding(.horizontal, 32)
+                    .multilineTextAlignment(.center)
+                
+                Image(systemName: imagem)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: getWidth() * 0.2)
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 8, x: 6, y: 8)
+                    .scaleEffect(isAnimating ? 1.0 : 0.6)
+                    .padding()
+                
+                if mostrarBotaoComecar {
+                    Button("Começar") {
+                        isOnboarding = false
+                    }
+                    .padding()
+                    .background(Color.white)
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                    .padding()
+                }
+            }
+        }
+        .onAppear {
+            withAnimation(.easeOut(duration: 1)) {
+                isAnimating = true
+            }
+        }
+        .onDisappear {
+            isAnimating = false
+        }
     }
-}
-
-#Preview {
-    OnboardingView()
 }
