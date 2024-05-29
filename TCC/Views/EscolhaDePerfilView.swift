@@ -12,6 +12,10 @@ struct EscolhaDePerfilView: View {
     var body: some View {
         NavigationView {
             List {
+                
+                Section("Percentual de substituição") {
+                    CustomSliderView()
+                }
                 Section {
                     NavigationLink {
                         AnaliseDeViabilidadeView()
@@ -46,16 +50,10 @@ struct EscolhaDePerfilView: View {
                                         Spacer()
                                     }
                                 }.font(.footnote)
-                                    
-
                                 Spacer()
-                                
                             }
                         }
-                        
-                        
                     }
-
                 }
                 Section {
                     NavigationLink {
@@ -64,12 +62,14 @@ struct EscolhaDePerfilView: View {
                         VStack{
                             HStack{
                                 Text("Balanceado")
+                                Image(systemName: "equal.circle")
                                 Spacer()
                             }.font(.title2)
                                 .bold()
+
        
                             HStack {
-                                Text("Balanceia o custo de implementação e a ecomomia de água")
+                                Text("Equilíbrio entre custo de implementação e economia de água.")
                                     .font(.footnote)
                                 .foregroundStyle(Color.gray)
                                 Spacer()
@@ -114,7 +114,7 @@ struct EscolhaDePerfilView: View {
                                 .bold()
        
                             HStack {
-                                Text("Prioriza a economia de água potável, resultando em um custo maior de implementação.")
+                                Text("Prioriza a economia de água potável, mesmo que implique em maior custo de implementação.")
                                     .font(.footnote)
                                 .foregroundStyle(Color.gray)
                                 Spacer()
@@ -146,8 +146,6 @@ struct EscolhaDePerfilView: View {
                     }
 
                 }
-
-
             }
         } .navigationTitle(Text("Escolha o seu tipo de perfil"))
         .navigationBarTitleDisplayMode(.inline)
@@ -163,7 +161,5 @@ struct Preview: View {
 }
 
 #Preview {
-   
     Preview()
-    //EscolhaDePerfilView(selectedTab: .constant(1))
 }

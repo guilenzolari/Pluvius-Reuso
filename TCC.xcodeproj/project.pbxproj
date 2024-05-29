@@ -30,6 +30,7 @@
 		F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */; };
 		F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */; };
 		F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */; };
+		F2F9A48A2C07AD5200A0D4FB /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaDePerfilView.swift; sourceTree = "<group>"; };
 		F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoTemasDidaticos.swift; sourceTree = "<group>"; };
 		F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
+		F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */,
 				F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */,
+				F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */,
 				F2EA8D9B2C02E66400E48929 /* TableView.swift */,
 			);
 			path = Components;
@@ -255,6 +258,7 @@
 				F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */,
 				F295EC2B2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift in Sources */,
 				F24E13DD2BD8525F00ED1579 /* TCCApp.swift in Sources */,
+				F2F9A48A2C07AD5200A0D4FB /* CustomSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

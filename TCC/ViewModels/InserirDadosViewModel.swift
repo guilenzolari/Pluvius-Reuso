@@ -15,6 +15,8 @@ final class InserirDadosViewModel: ObservableObject {
     @Published var tarifaDaAgua: Double = 0.0 // R$/m3
     @Published var consumoMediaDaResidencia: Double = 0.0 // m3/mes
     @Published var quantidadeMoradoresDaResidencia = 0.0
+    @Published var percentualDeSubstituicao = 0.25
+
     
     var areaString: String {
         get { area == 0 ? "" : String(area) }
