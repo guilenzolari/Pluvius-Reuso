@@ -11,15 +11,12 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack {
-            cor
-                .opacity(0.4)
-                .ignoresSafeArea()
-            
             VStack {
                 Text(titulo)
                     .font(.title)
                     .fontWeight(.heavy)
                     .padding()
+                    .multilineTextAlignment(.center)
                 
                 Text(texto)
                     .padding(.horizontal, 32)
