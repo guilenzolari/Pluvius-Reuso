@@ -26,6 +26,14 @@ struct TemasDidaticosView: View {
                                             imagem: "cloud.drizzle",
                                             texto: "Índice pluviométrico",
                                             cor: .indigo)
+                        BotaoTemasDidaticos(destino: Text("AAA"),
+                                            imagem: "shippingbox",
+                                            texto: "Materiais da Operação",
+                                            cor: .brown)
+                        BotaoTemasDidaticos(destino: Text("AAA"),
+                                            imagem: "arrow.circlepath",
+                                            texto: "Troca do Clorador",
+                                            cor: .black)
                     }
                 }
             }.navigationTitle(Text("Temas Didáticos"))

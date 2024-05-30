@@ -4,6 +4,10 @@ struct EscolhaDePerfilView: View {
     @Binding var selectedTab: Int
     @ObservedObject var inputs = InserirDadosViewModel.shared
     var vm = CalculosReservatorios()
+    var escolhaPerfilVM = EscolhaDePerfilViewModel()
+    @State var indiceBalancedo = 5
+    @State var indiceEcoDinheiro = 0
+    @State var indiceEcoAgua = 11
     @State var dadosSimulacoes: [SumarioDadosTotais] = []
 
     var body: some View {
@@ -11,11 +15,11 @@ struct EscolhaDePerfilView: View {
             List {
                 Section("Percentual de substituição") {
                     CustomSliderView()
-                }
+                }.listRowBackground(Color.clear)
                 Section {
                     NavigationLink {
                         if dadosSimulacoes.indices.contains(1) {
-                            DetalhesSimulacaoView(dado: dadosSimulacoes[0])
+                            DetalhesSimulacaoView(dado: dadosSimulacoes[indiceEcoDinheiro])
                         } else {
                             Text("Carregando")
                         }
@@ -28,7 +32,7 @@ struct EscolhaDePerfilView: View {
                             }.font(.title2).bold()
        
                             HStack {
-                                Text("Prioriza o menor custo em detrimento da economia de água potável.")
+                                Text("Prioriza o menor custo da implmentação do projeto em detrimento da economia de água potável.")
                                     .font(.footnote)
                                 Spacer()
                             }.padding(.bottom)
@@ -37,15 +41,19 @@ struct EscolhaDePerfilView: View {
                                 VStack {
                                     if dadosSimulacoes.indices.contains(0) {
                                         HStack {
-                                            Text("Investimento Inicial: R$ \(dadosSimulacoes[0].investimentoInicial, specifier: "%.2f")")
+                                            Text("Investimento Inicial: R$ \(dadosSimulacoes[indiceEcoDinheiro].investimentoInicial, specifier: "%.2f")")
                                             Spacer()
                                         }
                                         HStack {
-                                            Text("Economia Anual: R$ \(dadosSimulacoes[0].economiaFinanceiraAnual, specifier: "%.2f")")
+                                            Text("Economia Anual: R$ \(dadosSimulacoes[indiceEcoDinheiro].economiaFinanceiraAnual, specifier: "%.2f")")
                                             Spacer()
                                         }
                                         HStack {
-                                            Text("Tempo de Retorno do Investimento: \(dadosSimulacoes[0].tempoDeRetorno, specifier: "%.2f") anos")
+                                            if dadosSimulacoes[indiceEcoAgua].tempoDeRetorno > 0 {
+                                                Text("Tempo de Retorno do Investimento: \(dadosSimulacoes[indiceEcoDinheiro].tempoDeRetorno, specifier: "%.2f") anos")
+                                            } else {
+                                                Text("O projeto é financeiramente inviável")}
+                                            
                                             Spacer()
                                         }
                                     } else {
@@ -60,8 +68,8 @@ struct EscolhaDePerfilView: View {
                 .listRowBackground(Color.green.opacity(0.2))
                 Section {
                     NavigationLink {
-                        if dadosSimulacoes.indices.contains(5) {
-                            DetalhesSimulacaoView(dado: dadosSimulacoes[5])
+                        if dadosSimulacoes.indices.contains(indiceBalancedo) {
+                            DetalhesSimulacaoView(dado: dadosSimulacoes[indiceBalancedo])
                         } else {
                             Text("Carregando")
                         }
@@ -81,17 +89,20 @@ struct EscolhaDePerfilView: View {
                             
                             HStack {
                                 VStack {
-                                    if dadosSimulacoes.indices.contains(5) {
+                                    if dadosSimulacoes.indices.contains(indiceBalancedo) {
                                         HStack {
-                                            Text("Investimento Inicial: R$ \(dadosSimulacoes[5].investimentoInicial, specifier: "%.2f")")
+                                            Text("Investimento Inicial: R$ \(dadosSimulacoes[indiceBalancedo].investimentoInicial, specifier: "%.2f")")
                                             Spacer()
                                         }
                                         HStack {
-                                            Text("Economia Anual: R$ \(dadosSimulacoes[5].economiaFinanceiraAnual, specifier: "%.2f")")
+                                            Text("Economia Anual: R$ \(dadosSimulacoes[indiceBalancedo].economiaFinanceiraAnual, specifier: "%.2f")")
                                             Spacer()
                                         }
                                         HStack {
-                                            Text("Tempo de Retorno do Investimento: \(dadosSimulacoes[5].tempoDeRetorno, specifier: "%.2f") anos")
+                                            if dadosSimulacoes[indiceBalancedo].tempoDeRetorno > 0 {
+                                                Text("Tempo de Retorno do Investimento: \(dadosSimulacoes[indiceBalancedo].tempoDeRetorno, specifier: "%.2f") anos")
+                                            } else {
+                                                Text("O projeto é financeiramente inviável")}
                                             Spacer()
                                         }
                                     } else {
@@ -106,8 +117,8 @@ struct EscolhaDePerfilView: View {
                 .listRowBackground(Color.yellow.opacity(0.2))
                 Section {
                     NavigationLink {
-                        if dadosSimulacoes.indices.contains(11) {
-                            DetalhesSimulacaoView(dado: dadosSimulacoes[11])
+                        if dadosSimulacoes.indices.contains(indiceEcoAgua) {
+                            DetalhesSimulacaoView(dado: dadosSimulacoes[indiceEcoAgua])
                         } else {
                             Text("Carregando")
                         }
@@ -127,17 +138,20 @@ struct EscolhaDePerfilView: View {
                             
                             HStack {
                                 VStack {
-                                    if dadosSimulacoes.indices.contains(11) {
+                                    if dadosSimulacoes.indices.contains(indiceEcoAgua) {
                                         HStack {
-                                            Text("Investimento Inicial: R$ \(dadosSimulacoes[11].investimentoInicial, specifier: "%.2f")")
+                                            Text("Investimento Inicial: R$ \(dadosSimulacoes[indiceEcoAgua].investimentoInicial, specifier: "%.2f")")
                                             Spacer()
                                         }
                                         HStack {
-                                            Text("Economia Anual: R$ \(dadosSimulacoes[11].economiaFinanceiraAnual, specifier: "%.2f")")
+                                            Text("Economia Anual: R$ \(dadosSimulacoes[indiceEcoAgua].economiaFinanceiraAnual, specifier: "%.2f")")
                                             Spacer()
                                         }
                                         HStack {
-                                            Text("Tempo de Retorno do Investimento: \(dadosSimulacoes[11].tempoDeRetorno, specifier: "%.2f") anos")
+                                            if dadosSimulacoes[indiceEcoAgua].tempoDeRetorno > 0 {
+                                                Text("Tempo de Retorno do Investimento: \(dadosSimulacoes[indiceEcoAgua].tempoDeRetorno, specifier: "%.2f") anos")
+                                            } else {
+                                                Text("O projeto é financeiramente inviável")}
                                             Spacer()
                                         }
                                     } else {
@@ -156,11 +170,18 @@ struct EscolhaDePerfilView: View {
         .navigationTitle(Text("Escolha o seu tipo de perfil"))
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            dadosSimulacoes = vm.simulacoesVariandoVolumes(percentual: inputs.percentualDeSubstituicao)
+            atualizarDados()
         }
-        .onChange(of: inputs.percentualDeSubstituicao) { newValue in
-            dadosSimulacoes = vm.simulacoesVariandoVolumes(percentual: newValue)
+        .onChange(of: inputs.percentualDeSubstituicao) {
+            atualizarDados()
         }
+    }
+
+    func atualizarDados() {
+        dadosSimulacoes = vm.simulacoesVariandoVolumes(percentual: inputs.percentualDeSubstituicao)
+        indiceEcoAgua = escolhaPerfilVM.indicePerfilEcoAgua(dados: dadosSimulacoes)
+        indiceBalancedo = escolhaPerfilVM.indicePerfilBalanceado(dados: dadosSimulacoes)
+        indiceEcoDinheiro = escolhaPerfilVM.indiceMenorCustoDeImplementacao(dados: dadosSimulacoes)
     }
 }
 

@@ -27,6 +27,7 @@
 		F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */; };
 		F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */; };
 		F2F9A48A2C07AD5200A0D4FB /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */; };
+		F2F9A48F2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoTemasDidaticos.swift; sourceTree = "<group>"; };
 		F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
 		F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
+		F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaDePerfilViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F24E13F12BD8839500ED1579 /* InserirDadosViewModel.swift */,
+				F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				F20784052C05155B00AB27A1 /* View+PaddingSides.swift in Sources */,
 				F20784032C050C6700AB27A1 /* LinhaTabelaHorizontal.swift in Sources */,
 				F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */,
+				F2F9A48F2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift in Sources */,
 				F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */,
 				F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */,
 				F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */,

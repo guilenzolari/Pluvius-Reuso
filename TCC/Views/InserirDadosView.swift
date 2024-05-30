@@ -30,9 +30,9 @@ struct InserirDadosView: View {
                                 .disabled(inputs.consumoMediaDaResidencia != 0)
                         }
                         
-                        Section(header: Text("Percentual de substituição"), footer: Text("O Percentual de Substituição da água potável pela água pluvial indica a proporção de água potável que será substituída pela água captada pelo sistema de tratamento projetado. Os valores típicos variam de 20% a 30%. Neste aplicativo, utilizamos o valor padrão de 25%. Valores fora desse intervalo devem ser utilizados com cautela.")){
+                        Section(header: Text("Percentual de substituição"), footer: Text("O Percentual de Substituição da água potável pela água pluvial indica a proporção de água potável que será substituída pela água captada pelo sistema de tratamento projetado.")){
                             CustomSliderView()
-                        }
+                        }.listRowBackground(Color.clear)
                         
                         Section {
                             NavigationLink {
@@ -45,9 +45,10 @@ struct InserirDadosView: View {
                                 }
                             }.disabled(!inputs.isTextFieldFilled())
                         }
+
                     }
                 }
-            .navigationTitle(Text("Insira os dados da sua residência"))
+            .navigationTitle(Text("Dados da residência"))
         .navigationBarTitleDisplayMode(.inline)
         }
     }

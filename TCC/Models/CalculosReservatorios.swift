@@ -178,7 +178,7 @@ class CalculosReservatorios: ObservableObject {
     }
     
     func economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
-        return potencialMedioDeAtendimentoDaDemanda * demandaMensal
+        return potencialMedioDeAtendimentoDaDemanda * demandaMensal * 12
     }
     
     func economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
