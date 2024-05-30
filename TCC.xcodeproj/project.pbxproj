@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */; };
-		F20784012C0508D900AB27A1 /* DetalhesSimulacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784002C0508D900AB27A1 /* DetalhesSimulacaoView.swift */; };
 		F20784032C050C6700AB27A1 /* LinhaTabelaHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */; };
 		F20784052C05155B00AB27A1 /* View+PaddingSides.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784042C05155B00AB27A1 /* View+PaddingSides.swift */; };
 		F24E13DD2BD8525F00ED1579 /* TCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13DC2BD8525F00ED1579 /* TCCApp.swift */; };
 		F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */; };
 		F24E13E12BD8526000ED1579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24E13E02BD8526000ED1579 /* Assets.xcassets */; };
 		F24E13E42BD8526000ED1579 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24E13E32BD8526000ED1579 /* Preview Assets.xcassets */; };
-		F24E13EB2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13EA2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift */; };
+		F24E13EB2BD852F200ED1579 /* DetalhesSimulacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13EA2BD852F200ED1579 /* DetalhesSimulacaoView.swift */; };
 		F24E13ED2BD8530200ED1579 /* TemasDidaticosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */; };
 		F24E13F02BD8545000ED1579 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13EF2BD8545000ED1579 /* MainView.swift */; };
 		F24E13F22BD8839500ED1579 /* InserirDadosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13F12BD8839500ED1579 /* InserirDadosViewModel.swift */; };
@@ -24,9 +23,6 @@
 		F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */; };
 		F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */; };
 		F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */; };
-		F295EC292BE5680F005DAC05 /* CalculoOPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC282BE5680F005DAC05 /* CalculoOPEX.swift */; };
-		F295EC2B2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */; };
-		F2EA8D9C2C02E66400E48929 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA8D9B2C02E66400E48929 /* TableView.swift */; };
 		F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */; };
 		F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */; };
 		F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */; };
@@ -35,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculosReservatorios.swift; sourceTree = "<group>"; };
-		F20784002C0508D900AB27A1 /* DetalhesSimulacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesSimulacaoView.swift; sourceTree = "<group>"; };
 		F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaTabelaHorizontal.swift; sourceTree = "<group>"; };
 		F20784042C05155B00AB27A1 /* View+PaddingSides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PaddingSides.swift"; sourceTree = "<group>"; };
 		F24E13D92BD8525F00ED1579 /* TCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +38,7 @@
 		F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserirDadosView.swift; sourceTree = "<group>"; };
 		F24E13E02BD8526000ED1579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F24E13E32BD8526000ED1579 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F24E13EA2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseDeViabilidadeView.swift; sourceTree = "<group>"; };
+		F24E13EA2BD852F200ED1579 /* DetalhesSimulacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesSimulacaoView.swift; sourceTree = "<group>"; };
 		F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemasDidaticosView.swift; sourceTree = "<group>"; };
 		F24E13EF2BD8545000ED1579 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F24E13F12BD8839500ED1579 /* InserirDadosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserirDadosViewModel.swift; sourceTree = "<group>"; };
@@ -52,9 +47,6 @@
 		F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+GetSize.swift"; sourceTree = "<group>"; };
 		F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundedTwoDecimal.swift"; sourceTree = "<group>"; };
 		F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoCAPEX.swift; sourceTree = "<group>"; };
-		F295EC282BE5680F005DAC05 /* CalculoOPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoOPEX.swift; sourceTree = "<group>"; };
-		F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoAnaliseTecnicoEconomica.swift; sourceTree = "<group>"; };
-		F2EA8D9B2C02E66400E48929 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaDePerfilView.swift; sourceTree = "<group>"; };
 		F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoTemasDidaticos.swift; sourceTree = "<group>"; };
 		F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
@@ -117,10 +109,9 @@
 				F27EDB782BFD727500368CE7 /* OnboardingManagerView.swift */,
 				F27EDB822BFD78ED00368CE7 /* OnboardingView.swift */,
 				F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */,
-				F24E13EA2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift */,
 				F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */,
 				F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */,
-				F20784002C0508D900AB27A1 /* DetalhesSimulacaoView.swift */,
+				F24E13EA2BD852F200ED1579 /* DetalhesSimulacaoView.swift */,
 				F2EA8D9D2C02E77600E48929 /* Components */,
 			);
 			path = Views;
@@ -149,8 +140,6 @@
 			children = (
 				F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */,
 				F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */,
-				F295EC282BE5680F005DAC05 /* CalculoOPEX.swift */,
-				F295EC2A2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift */,
 				F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */,
 			);
 			path = Models;
@@ -162,7 +151,6 @@
 				F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */,
 				F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */,
 				F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */,
-				F2EA8D9B2C02E66400E48929 /* TableView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -237,9 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2EA8D9C2C02E66400E48929 /* TableView.swift in Sources */,
-				F295EC292BE5680F005DAC05 /* CalculoOPEX.swift in Sources */,
-				F20784012C0508D900AB27A1 /* DetalhesSimulacaoView.swift in Sources */,
 				F20784052C05155B00AB27A1 /* View+PaddingSides.swift in Sources */,
 				F20784032C050C6700AB27A1 /* LinhaTabelaHorizontal.swift in Sources */,
 				F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */,
@@ -247,7 +232,7 @@
 				F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */,
 				F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */,
 				F24E13F22BD8839500ED1579 /* InserirDadosViewModel.swift in Sources */,
-				F24E13EB2BD852F200ED1579 /* AnaliseDeViabilidadeView.swift in Sources */,
+				F24E13EB2BD852F200ED1579 /* DetalhesSimulacaoView.swift in Sources */,
 				F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */,
 				F27EDB832BFD78ED00368CE7 /* OnboardingView.swift in Sources */,
 				F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */,
@@ -256,7 +241,6 @@
 				F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */,
 				F27EDB792BFD727500368CE7 /* OnboardingManagerView.swift in Sources */,
 				F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */,
-				F295EC2B2BE589BE005DAC05 /* CalculoAnaliseTecnicoEconomica.swift in Sources */,
 				F24E13DD2BD8525F00ED1579 /* TCCApp.swift in Sources */,
 				F2F9A48A2C07AD5200A0D4FB /* CustomSliderView.swift in Sources */,
 			);

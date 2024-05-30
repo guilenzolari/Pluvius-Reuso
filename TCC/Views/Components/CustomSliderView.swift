@@ -2,12 +2,12 @@ import SwiftUI
 
 struct CustomSliderView: View {
     @ObservedObject var inputs = InserirDadosViewModel.shared
-
+    let limiteMinimo = 0.01
     var body: some View {
         VStack {
             Slider(
                 value: $inputs.percentualDeSubstituicao,
-                in: 0...1,
+                in: limiteMinimo...1,
                 onEditingChanged: { editing in
                     // Nenhuma ação necessária aqui
                 }

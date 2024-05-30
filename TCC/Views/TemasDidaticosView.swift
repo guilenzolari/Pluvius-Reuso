@@ -24,7 +24,7 @@ struct TemasDidaticosView: View {
                                             cor: .blue)
                         BotaoTemasDidaticos(destino: Text("AAA"),
                                             imagem: "cloud.drizzle",
-                                            texto: "Índice Pluviométrico",
+                                            texto: "Índice pluviométrico",
                                             cor: .indigo)
                     }
                 }
