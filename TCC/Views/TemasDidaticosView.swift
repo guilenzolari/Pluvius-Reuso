@@ -13,7 +13,7 @@ struct TemasDidaticosView: View {
                                             imagem: "gearshape",
                                             texto: "Funcionamento do Processo",
                                             cor: .gray)
-                        BotaoTemasDidaticos(destino: Text("AA"),
+                        BotaoTemasDidaticos(destino: UsosDaAguaTratada(),
                                             imagem: "spigot",
                                             texto: "Usos da Água Tratada",
                                             cor: .orange)
@@ -38,6 +38,10 @@ struct TemasDidaticosView: View {
                                             imagem: "rectangle",
                                             texto: "Como calcular a área de captação",
                                             cor: .red)
+                        BotaoTemasDidaticos(destino: Text("AAA"),
+                                            imagem: "exclamationmark.triangle",
+                                            texto: "Limitações do projeto",
+                                            cor: Color.yellow)
                     }
                 }
             }.navigationTitle(Text("Temas Didáticos"))

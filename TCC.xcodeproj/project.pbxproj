@@ -31,6 +31,7 @@
 		F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4902C094A1000A0D4FB /* BotaoEscolhaPerfil.swift */; };
 		F2F9A4932C09630C00A0D4FB /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4922C09630C00A0D4FB /* PDFManager.swift */; };
 		F2F9A4952C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4942C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift */; };
+		F2F9A4972C0A3C7200A0D4FB /* UsosDaAguaTratada.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4962C0A3C7200A0D4FB /* UsosDaAguaTratada.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		F2F9A4902C094A1000A0D4FB /* BotaoEscolhaPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoEscolhaPerfil.swift; sourceTree = "<group>"; };
 		F2F9A4922C09630C00A0D4FB /* PDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
 		F2F9A4942C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesSimulacaoViewExport.swift; sourceTree = "<group>"; };
+		F2F9A4962C0A3C7200A0D4FB /* UsosDaAguaTratada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsosDaAguaTratada.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */,
 				F24E13EA2BD852F200ED1579 /* DetalhesSimulacaoView.swift */,
 				F2F9A4942C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift */,
+				F2F9A4962C0A3C7200A0D4FB /* UsosDaAguaTratada.swift */,
 				F2EA8D9D2C02E77600E48929 /* Components */,
 			);
 			path = Views;
@@ -243,6 +246,7 @@
 				F2F9A4932C09630C00A0D4FB /* PDFManager.swift in Sources */,
 				F2F9A48F2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift in Sources */,
 				F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */,
+				F2F9A4972C0A3C7200A0D4FB /* UsosDaAguaTratada.swift in Sources */,
 				F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */,
 				F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */,
 				F24E13F22BD8839500ED1579 /* InserirDadosViewModel.swift in Sources */,
