@@ -3,6 +3,9 @@ import SwiftUI
 
 struct DetalhesSimulacaoView: View {
     @State var dado: SumarioDadosTotais
+    //mock
+    var economia: String
+    var tempoRetorno: String
     
     var body: some View {
         NavigationView {
@@ -43,8 +46,8 @@ struct DetalhesSimulacaoView: View {
                     LinhaTabelaHorizontal(campo: "Custos Operacionais Anuais (R$)", valor: "\(String(format: "%.1f", dado.opex))")
                     
                     LinhaTabelaHorizontal(campo: "Economia Anual de Água (L)", valor: "\(String(format: "%.1f", dado.economiaDeAguaAnual))")
-                    LinhaTabelaHorizontal(campo: "Economia Anual na Conta de Água (R$)", valor: "\(String(format: "%.1f", dado.economiaFinanceiraAnual))")
-                    LinhaTabelaHorizontal(campo: "Tempo de Retorno do Investimento (anos)", valor: "\(String(format: "%.1f", dado.tempoDeRetorno))")
+                    LinhaTabelaHorizontal(campo: "Economia Anual na Conta de Água", valor: economia)
+                    LinhaTabelaHorizontal(campo: "Tempo de Retorno do Investimento (anos)", valor: tempoRetorno)
                     Spacer()
                 }
             }

@@ -15,6 +15,10 @@ struct BotaoEscolhaPerfil: View {
     var text: String
     var color: Color
     
+        //mock
+    var economia: String
+    var tempoRetorno: String
+    
     var body: some View {
         VStack {
             HStack {
@@ -43,13 +47,13 @@ struct BotaoEscolhaPerfil: View {
                             Spacer()
                             VStack{
                                 Text("ECONOMIA")
-                                Text("R$ \(dadosSimulacoes[indice].economiaFinanceiraAnual, specifier: "%.2f")/ANO")
+                                Text(economia)
                             }
                             Spacer()
                             VStack{
                                 Text("RETORNO")
                                 if dadosSimulacoes[indice].tempoDeRetorno > 0 {
-                                    Text("\(dadosSimulacoes[indice].tempoDeRetorno, specifier: "%.2f") anos")
+                                    Text(tempoRetorno)
                                 } else {
                                     Text("O projeto é financeiramente inviável")}
                             }
@@ -64,7 +68,9 @@ struct BotaoEscolhaPerfil: View {
             Divider()
             NavigationLink{
                 if dadosSimulacoes.indices.contains(indice) {
-                    DetalhesSimulacaoView(dado: dadosSimulacoes[indice])
+                    DetalhesSimulacaoView(dado: dadosSimulacoes[indice],
+                                          economia: economia,
+                                          tempoRetorno: tempoRetorno)
                 } else {
                     Text("Carregando")}
             }label: {
