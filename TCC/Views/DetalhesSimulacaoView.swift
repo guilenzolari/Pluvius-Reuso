@@ -47,7 +47,7 @@ struct DetalhesSimulacaoView: View {
                     Spacer()
                 }
             }
-            .navigationTitle(Text("Análise de Viabilidade"))
+            .navigationTitle(Text("Resultados detalhados"))
             .navigationBarTitleDisplayMode(.inline)
   
         }

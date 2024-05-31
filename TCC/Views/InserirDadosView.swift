@@ -5,51 +5,41 @@ struct InserirDadosView: View {
     @ObservedObject var inputs = InserirDadosViewModel.shared
     @State var isTextFieldFilled = false
     @Binding var selectedTab: Int
-
+    
     var body: some View {
-         NavigationView {
+        NavigationView {
             VStack {
-                    Form {
-                        Section(header: Text("Coleta"), footer: Text("Área da superfície utilizada para coletar água da chuva (ex: telhados, lajes, calhas).")) {
-                            TextField("Área de Captação (m²)", text: $inputs.areaString)
-                                .keyboardType(.numberPad)
-                        }
-                        
-                        Section(footer: Text("Valor encontrado na conta de água. Pode variar com o consumo e localização.")) {
-                            TextField("Preço da água (R$/m³)", text: $inputs.tarifaDaAguaString)
-                                .keyboardType(.numberPad)
-                        }
-                        
-                        Section(header: Text("Demanda"), footer: Text("Preencha apenas um dos campos acima. Preencher 'Consumo mensal de água' dá resultados mais precisos.")) {
-                            TextField("Consumo médio mensal de água (m³)", text: $inputs.consumoMediaDaResidenciaString)
-                                .keyboardType(.numberPad)
-                                .disabled(inputs.quantidadeMoradoresDaResidencia != 0)
-                            
-                            TextField("Quantidade de moradores", text: $inputs.quantidadeMoradoresDaResidenciaString)
-                                .keyboardType(.numberPad)
-                                .disabled(inputs.consumoMediaDaResidencia != 0)
-                        }
-                        
-                        Section(header: Text("Percentual de substituição"), footer: Text("O Percentual de Substituição da água potável pela água pluvial indica a proporção de água potável que será substituída pela água captada pelo sistema de tratamento projetado.")){
-                            CustomSliderView()
-                        }.listRowBackground(Color.clear)
-                        
-                        Section {
-                            NavigationLink {
-                                EscolhaDePerfilView(selectedTab: $selectedTab)
-                            } label: {
-                                HStack {
-                                    Spacer()
-                                    Text("Visualizar simulações")
-                                    Spacer()
-                                }
-                            }.disabled(!inputs.isTextFieldFilled())
-                        }
-
+                Form {
+                    
+                    Section(header: Text("Demanda"), footer: Text("Pode ser encontrado na conta de água da sua residência.")) {
+                        TextField("Consumo médio mensal de água (m³)", text: $inputs.consumoMediaDaResidenciaString)
+                            .keyboardType(.numberPad)
                     }
+                    
+                    Section(footer: Text("Quantas pessoas utilizam a mesma rede de água na sua residência.")) {
+                        TextField("Quantidade de moradores", text: $inputs.quantidadeMoradoresDaResidenciaString)
+                            .keyboardType(.numberPad)
+                    }
+                    
+                    Section(header: Text("Coleta"), footer: Text("Área da superfície utilizada para coletar água da chuva (ex: telhados, lajes, calhas).")) {
+                        TextField("Área de Captação (m²)", text: $inputs.areaString)
+                            .keyboardType(.numberPad)
+                    }
+                    
+                    Section {
+                        NavigationLink(destination: EscolhaDePerfilView(selectedTab: $selectedTab)) {
+                            Text("Simular")
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, maxHeight: 44)
+                                .cornerRadius(8)
+                        }
+                        .disabled(!inputs.isTextFieldFilled())
+                    }.listRowBackground(inputs.isTextFieldFilled() ? Color.blue : Color.gray)
                 }
+            }
             .navigationTitle(Text("Dados da residência"))
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
+

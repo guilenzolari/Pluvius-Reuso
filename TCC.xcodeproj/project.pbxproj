@@ -28,6 +28,7 @@
 		F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */; };
 		F2F9A48A2C07AD5200A0D4FB /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */; };
 		F2F9A48F2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */; };
+		F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4902C094A1000A0D4FB /* BotaoEscolhaPerfil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
 		F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaDePerfilViewModel.swift; sourceTree = "<group>"; };
+		F2F9A4902C094A1000A0D4FB /* BotaoEscolhaPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoEscolhaPerfil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */,
+				F2F9A4902C094A1000A0D4FB /* BotaoEscolhaPerfil.swift */,
 				F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */,
 				F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */,
 			);
@@ -241,6 +244,7 @@
 				F27EDB832BFD78ED00368CE7 /* OnboardingView.swift in Sources */,
 				F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */,
 				F24E13ED2BD8530200ED1579 /* TemasDidaticosView.swift in Sources */,
+				F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */,
 				F24E13F02BD8545000ED1579 /* MainView.swift in Sources */,
 				F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */,
 				F27EDB792BFD727500368CE7 /* OnboardingManagerView.swift in Sources */,

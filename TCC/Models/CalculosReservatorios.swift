@@ -183,13 +183,33 @@ class CalculosReservatorios: ObservableObject {
     
     func economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
         let economiaDeAguaAnual = economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: potencialMedioDeAtendimentoDaDemanda, demandaMensal: demandaMensal) / 1000 // m3
-        return economiaDeAguaAnual * inputs.tarifaDaAgua
+        return economiaDeAguaAnual * custoDaAgua()
     }
     
     func tempoDeRetorno(volume: Double, potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
         let economiaEfetivaAnual = economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: potencialMedioDeAtendimentoDaDemanda, demandaMensal: demandaMensal) - opex
         return investimentoInicial(volume: volume) / economiaEfetivaAnual
     }
+    
+    func custoDaAgua() -> Double {
+        let consumo = inputs.consumoMediaDaResidencia
+        if consumo <= 10 {
+            return (45.94 + 36.75 + 19.76) * consumo
+        } else if consumo <= 15 {
+            return (8.53 + 6.83 + 3.65) * consumo - 39.36 - 31.55 - 16.74
+        } else if consumo <= 20 {
+            return (8.72 + 6.98 + 3.75) * consumo - 42.41 - 33.8 - 18.24
+        } else if consumo <= 25 {
+            return (8.94 + 7.12 + 3.86) * consumo - 46.41 - 36.6 - 20.44
+        } else if consumo <= 30 {
+            return (10.98 + 8.77 + 4.71) * consumo - 97.61 - 77.85 - 41.69
+        } else if consumo <= 50 {
+            return (11.68 + 9.34 + 5.03) * consumo - 118.61 - 94.95 - 51.29
+        } else {
+            return (17.93 + 14.3 + 7.7) * consumo - 413.11 - 342.25 - 184.79
+        }
+    }
+    
 }
 
 struct DadosConsumoMes {
