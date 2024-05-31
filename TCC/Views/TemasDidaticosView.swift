@@ -34,6 +34,10 @@ struct TemasDidaticosView: View {
                                             imagem: "arrow.circlepath",
                                             texto: "Troca do Clorador",
                                             cor: .black)
+                        BotaoTemasDidaticos(destino: Text("AAA"),
+                                            imagem: "rectangle",
+                                            texto: "Como calcular a área de captação",
+                                            cor: .red)
                     }
                 }
             }.navigationTitle(Text("Temas Didáticos"))

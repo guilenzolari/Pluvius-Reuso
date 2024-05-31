@@ -9,25 +9,6 @@ import Foundation
 
 struct EscolhaDePerfilViewModel {
     
-    func indiceMenorCustoDeImplementacao(dados: [SumarioDadosTotais]) -> Int {
-        guard !dados.isEmpty else {
-            return -1
-        }
-        
-        var index = 0
-        var menorCusto = dados[0].investimentoInicial
-        
-        for (i, dado) in dados.enumerated() {
-            if dado.investimentoInicial < menorCusto {
-                menorCusto = dado.investimentoInicial
-                index = i
-            }
-        }
-        
-        return index
-    }
-
-    
     func indicePerfilBalanceado(dados: [SumarioDadosTotais]) -> Int {
         guard !dados.isEmpty else {
             return -1
@@ -53,16 +34,15 @@ struct EscolhaDePerfilViewModel {
         }
         
         var index = 0
-        var melhorRazao = dados[0].potencialMedioDeAtendimentoDaDemanda / dados[0].capacidadeReservatorio
+        var melhorPotencial = dados[0].potencialMedioDeAtendimentoDaDemanda
         
         for (i, dado) in dados.enumerated() {
-            let razaoAtual = dado.potencialMedioDeAtendimentoDaDemanda / dado.capacidadeReservatorio
-            if razaoAtual > melhorRazao {
-                melhorRazao = razaoAtual
+            let potencialAtual = dado.potencialMedioDeAtendimentoDaDemanda
+            if potencialAtual > melhorPotencial {
+                melhorPotencial = potencialAtual
                 index = i
             }
         }
-        
         return index
     }
 

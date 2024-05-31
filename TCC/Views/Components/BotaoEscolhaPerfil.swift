@@ -37,7 +37,7 @@ struct BotaoEscolhaPerfil: View {
                     if dadosSimulacoes.indices.contains(indice) {
                             HStack {
                                 VStack {
-                                    Text("INVESTIMENTO INCIAL")
+                                    Text("INVESTIMENTO INICIAL")
                                     Text("R$ \(dadosSimulacoes[indice].investimentoInicial, specifier: "%.2f")")
                                 }
                             Spacer()

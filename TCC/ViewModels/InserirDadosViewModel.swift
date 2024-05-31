@@ -12,9 +12,9 @@ final class InserirDadosViewModel: ObservableObject {
     static let shared = InserirDadosViewModel()
     
     @Published var area: Double = 0.0 // m2
-    @Published var consumoMediaDaResidencia: Double = 0.0 // m3/mes
+    @Published var consumoMedioDaResidencia: Double = 0.0 // m3/mes
     @Published var quantidadeMoradoresDaResidencia = 0.0
-    @Published var percentualDeSubstituicao = 0.25
+    @Published var percentualDeSubstituicao = 0.35
 
     
     var areaString: String {
@@ -23,8 +23,8 @@ final class InserirDadosViewModel: ObservableObject {
     }
     
     var consumoMediaDaResidenciaString: String {
-        get { consumoMediaDaResidencia == 0 ? "" : String(consumoMediaDaResidencia) }
-        set { consumoMediaDaResidencia = Double(newValue) ?? 0 }
+        get { consumoMedioDaResidencia == 0 ? "" : String(consumoMedioDaResidencia) }
+        set { consumoMedioDaResidencia = Double(newValue) ?? 0 }
     }
     
     var quantidadeMoradoresDaResidenciaString: String {
@@ -35,7 +35,7 @@ final class InserirDadosViewModel: ObservableObject {
     private init(){}
     
     func isTextFieldFilled() -> Bool{
-        if(area == 0 || (consumoMediaDaResidencia == 0 && quantidadeMoradoresDaResidencia == 0)){
+        if(area == 0 || (consumoMedioDaResidencia == 0 && quantidadeMoradoresDaResidencia == 0)){
             return false
         } else {
             return true

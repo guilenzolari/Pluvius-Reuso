@@ -8,7 +8,7 @@
 import Foundation
 
 let onboardingContent: [Onboarding] = [
-    Onboarding(titulo: "Bem-vindo ao app de Pluvius Reuso!",
+    Onboarding(titulo: "Bem-vindo ao app Pluvius Reuso!",
                texto: "Nosso aplicativo ajuda você a estimar os custos e a analisar a viabilidade de implementar sistemas de reutilização de água da chuva em sua residência em Campinas.",
                image: "dollarsign.circle",
                color: .yellow,

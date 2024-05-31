@@ -6,7 +6,7 @@ class CalculosReservatorios: ObservableObject {
     let consumoMedioPessoa: Double = 156 // Litros/dia*pessoa
     let coeficienteAproveitamento: Double = 0.8
     let precipitacaoMensal: [Double] = [178.1, 258.8, 81.3, 12.2, 23.4, 27.1, 0, 15.5, 6.6, 121.4, 83.8, 168.1, 312.9, 168.4, 130.8, 40.1, 39.4, 15.7, 8.9, 28.2, 89.7, 120.4, 142.5, 324.1]
-    let volumesTanques: [Double] = [600, 1000, 1600, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
+    let volumesTanques: [Double] = [600, 1000, 1600, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000] //L
     let custoBomba: Double = 150
     let custoTubulacao: Double = 100
     let custoClorador: Double = 150
@@ -16,12 +16,15 @@ class CalculosReservatorios: ObservableObject {
     @ObservedObject var inputs = InserirDadosViewModel.shared
     
     func demandaAguaPluvialMensal(percentualSubstituicao: Double) -> Double {
-        if inputs.quantidadeMoradoresDaResidencia != 0 {
-            return inputs.quantidadeMoradoresDaResidencia * consumoMedioPessoa * percentualSubstituicao * (365/12)
+        if inputs.consumoMedioDaResidencia == 0 {
+            let demanda =  inputs.quantidadeMoradoresDaResidencia * consumoMedioPessoa * percentualSubstituicao * (365 / 12)
+            return demanda
         } else {
-            return inputs.consumoMediaDaResidencia * percentualSubstituicao
+            let demanda = inputs.consumoMedioDaResidencia * percentualSubstituicao * 1000
+            return demanda
         }
     }
+
     
     func volumeCaptadoNosMeses(precipitacaoDoMes: Double) -> Double {
         return precipitacaoDoMes * coeficienteAproveitamento * inputs.area
@@ -177,35 +180,50 @@ class CalculosReservatorios: ObservableObject {
         return outrosCustos() + capex.custoTotalReservatorios(volume: volume)
     }
     
+    //L
     func economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
+        print("economiaDeAguaAnualFuncao: \(potencialMedioDeAtendimentoDaDemanda * demandaMensal * 12)")
         return potencialMedioDeAtendimentoDaDemanda * demandaMensal * 12
     }
     
     func economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
-        let economiaDeAguaAnual = economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: potencialMedioDeAtendimentoDaDemanda, demandaMensal: demandaMensal) / 1000 // m3
-        return economiaDeAguaAnual * custoDaAgua()
+        let economiaDeAguaAnualEmLitros = economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: potencialMedioDeAtendimentoDaDemanda, demandaMensal: demandaMensal)
+        let economiaDeAguaAnualEmMetrosCubicos = economiaDeAguaAnualEmLitros / 1000 // Convertendo para m³
+        print("economiaDeAguaAnualEmMetrosCubicos: \(economiaDeAguaAnualEmMetrosCubicos)")
+        let custoDaAgua = custoDaAgua()
+        return custoDaAgua
     }
+
     
     func tempoDeRetorno(volume: Double, potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
         let economiaEfetivaAnual = economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: potencialMedioDeAtendimentoDaDemanda, demandaMensal: demandaMensal) - opex
         return investimentoInicial(volume: volume) / economiaEfetivaAnual
     }
     
+    // R$/m3
     func custoDaAgua() -> Double {
-        let consumo = inputs.consumoMediaDaResidencia
+        let consumo = demandaAguaPluvialMensal(percentualSubstituicao: inputs.percentualDeSubstituicao)/1000
+        print(consumo)
         if consumo <= 10 {
+            print(consumo)
             return (45.94 + 36.75 + 19.76) * consumo
         } else if consumo <= 15 {
+            print(consumo)
             return (8.53 + 6.83 + 3.65) * consumo - 39.36 - 31.55 - 16.74
         } else if consumo <= 20 {
+            print(consumo)
             return (8.72 + 6.98 + 3.75) * consumo - 42.41 - 33.8 - 18.24
         } else if consumo <= 25 {
+            print(consumo)
             return (8.94 + 7.12 + 3.86) * consumo - 46.41 - 36.6 - 20.44
         } else if consumo <= 30 {
+            print(consumo)
             return (10.98 + 8.77 + 4.71) * consumo - 97.61 - 77.85 - 41.69
         } else if consumo <= 50 {
+            print(consumo)
             return (11.68 + 9.34 + 5.03) * consumo - 118.61 - 94.95 - 51.29
         } else {
+            print(consumo)
             return (17.93 + 14.3 + 7.7) * consumo - 413.11 - 342.25 - 184.79
         }
     }

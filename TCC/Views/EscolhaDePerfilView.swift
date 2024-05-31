@@ -5,7 +5,7 @@ struct EscolhaDePerfilView: View {
     @ObservedObject var inputs = InserirDadosViewModel.shared
     var vm = CalculosReservatorios()
     var escolhaPerfilVM = EscolhaDePerfilViewModel()
-    @State var indiceBalancedo = 5
+    @State var indiceBalancedo = 6
     @State var indiceEcoDinheiro = 0
     @State var indiceEcoAgua = 11
     @State var dadosSimulacoes: [SumarioDadosTotais] = []
@@ -13,9 +13,9 @@ struct EscolhaDePerfilView: View {
     var body: some View {
         NavigationView {
             List {
-                Section("Percentual de substituição") {
-                    CustomSliderView()
-                }.listRowBackground(Color.clear)
+                Section(header: Text("Substituição"), footer: Text("Porcentagem de água potável substituída por água da chuva.")) {
+                    CustomSliderView().padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                }
                
                 Section{
                     BotaoEscolhaPerfil(indice: indiceEcoAgua,
@@ -55,8 +55,6 @@ struct EscolhaDePerfilView: View {
     func atualizarDados() {
         dadosSimulacoes = vm.simulacoesVariandoVolumes(percentual: inputs.percentualDeSubstituicao)
         indiceEcoAgua = escolhaPerfilVM.indicePerfilEcoAgua(dados: dadosSimulacoes)
-        indiceBalancedo = escolhaPerfilVM.indicePerfilBalanceado(dados: dadosSimulacoes)
-        indiceEcoDinheiro = escolhaPerfilVM.indiceMenorCustoDeImplementacao(dados: dadosSimulacoes)
     }
 }
 
