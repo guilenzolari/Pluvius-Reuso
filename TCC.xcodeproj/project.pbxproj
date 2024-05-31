@@ -29,6 +29,8 @@
 		F2F9A48A2C07AD5200A0D4FB /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */; };
 		F2F9A48F2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */; };
 		F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4902C094A1000A0D4FB /* BotaoEscolhaPerfil.swift */; };
+		F2F9A4932C09630C00A0D4FB /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4922C09630C00A0D4FB /* PDFManager.swift */; };
+		F2F9A4952C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4942C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		F2F9A4892C07AD5200A0D4FB /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaDePerfilViewModel.swift; sourceTree = "<group>"; };
 		F2F9A4902C094A1000A0D4FB /* BotaoEscolhaPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoEscolhaPerfil.swift; sourceTree = "<group>"; };
+		F2F9A4922C09630C00A0D4FB /* PDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
+		F2F9A4942C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesSimulacaoViewExport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */,
 				F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */,
 				F24E13EA2BD852F200ED1579 /* DetalhesSimulacaoView.swift */,
+				F2F9A4942C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift */,
 				F2EA8D9D2C02E77600E48929 /* Components */,
 			);
 			path = Views;
@@ -136,6 +141,7 @@
 			children = (
 				F24E13F12BD8839500ED1579 /* InserirDadosViewModel.swift */,
 				F2F9A48E2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift */,
+				F2F9A4922C09630C00A0D4FB /* PDFManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 				F20784052C05155B00AB27A1 /* View+PaddingSides.swift in Sources */,
 				F20784032C050C6700AB27A1 /* LinhaTabelaHorizontal.swift in Sources */,
 				F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */,
+				F2F9A4932C09630C00A0D4FB /* PDFManager.swift in Sources */,
 				F2F9A48F2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift in Sources */,
 				F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */,
 				F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */,
@@ -247,6 +254,7 @@
 				F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */,
 				F24E13F02BD8545000ED1579 /* MainView.swift in Sources */,
 				F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */,
+				F2F9A4952C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift in Sources */,
 				F27EDB792BFD727500368CE7 /* OnboardingManagerView.swift in Sources */,
 				F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */,
 				F24E13DD2BD8525F00ED1579 /* TCCApp.swift in Sources */,

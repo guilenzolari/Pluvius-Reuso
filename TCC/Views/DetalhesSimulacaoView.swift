@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftUI
 
 struct DetalhesSimulacaoView: View {
     @State var dado: SumarioDadosTotais
@@ -49,7 +50,10 @@ struct DetalhesSimulacaoView: View {
             }
             .navigationTitle(Text("Resultados detalhados"))
             .navigationBarTitleDisplayMode(.inline)
-  
+            .navigationBarItems(trailing: Button(action: {
+            }) {
+                ContentView(dado: dado)
+            })
         }
     }
 }
