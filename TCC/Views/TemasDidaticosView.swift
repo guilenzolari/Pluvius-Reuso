@@ -18,7 +18,7 @@ struct TemasDidaticosView: View {
                                             texto: "Usos da Água Tratada",
                                             cor: .orange)
                         
-                        BotaoTemasDidaticos(destino: Text("AAA"),
+                        BotaoTemasDidaticos(destino: ProblemaDaAguaNoMundoView(),
                                             imagem: "drop",
                                             texto: "Problema da Água no Mundo",
                                             cor: .blue)
