@@ -23,6 +23,7 @@
 		F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */; };
 		F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */; };
 		F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */; };
+		F29BC1D22C11FEBA00A38009 /* IndicePluviometricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29BC1D12C11FEBA00A38009 /* IndicePluviometricoView.swift */; };
 		F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */; };
 		F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */; };
 		F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */; };
@@ -52,6 +53,7 @@
 		F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+GetSize.swift"; sourceTree = "<group>"; };
 		F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundedTwoDecimal.swift"; sourceTree = "<group>"; };
 		F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoCAPEX.swift; sourceTree = "<group>"; };
+		F29BC1D12C11FEBA00A38009 /* IndicePluviometricoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicePluviometricoView.swift; sourceTree = "<group>"; };
 		F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaDePerfilView.swift; sourceTree = "<group>"; };
 		F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoTemasDidaticos.swift; sourceTree = "<group>"; };
 		F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
@@ -119,11 +121,11 @@
 				F27EDB782BFD727500368CE7 /* OnboardingManagerView.swift */,
 				F27EDB822BFD78ED00368CE7 /* OnboardingView.swift */,
 				F24E13DE2BD8525F00ED1579 /* InserirDadosView.swift */,
-				F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */,
 				F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */,
 				F24E13EA2BD852F200ED1579 /* DetalhesSimulacaoView.swift */,
 				F2F9A4942C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift */,
-				F2F9A4962C0A3C7200A0D4FB /* UsosDaAguaTratada.swift */,
+				F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */,
+				F29BC1D02C11FE1C00A38009 /* TemasDidáticos */,
 				F2EA8D9D2C02E77600E48929 /* Components */,
 			);
 			path = Views;
@@ -157,6 +159,16 @@
 				F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F29BC1D02C11FE1C00A38009 /* TemasDidáticos */ = {
+			isa = PBXGroup;
+			children = (
+				F2F9A4962C0A3C7200A0D4FB /* UsosDaAguaTratada.swift */,
+				F29BC1D12C11FEBA00A38009 /* IndicePluviometricoView.swift */,
+			);
+			name = "TemasDidáticos";
+			path = "TemasDidáticos";
 			sourceTree = "<group>";
 		};
 		F2EA8D9D2C02E77600E48929 /* Components */ = {
@@ -257,6 +269,7 @@
 				F24E13ED2BD8530200ED1579 /* TemasDidaticosView.swift in Sources */,
 				F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */,
 				F24E13F02BD8545000ED1579 /* MainView.swift in Sources */,
+				F29BC1D22C11FEBA00A38009 /* IndicePluviometricoView.swift in Sources */,
 				F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */,
 				F2F9A4952C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift in Sources */,
 				F27EDB792BFD727500368CE7 /* OnboardingManagerView.swift in Sources */,

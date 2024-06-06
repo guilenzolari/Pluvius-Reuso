@@ -23,14 +23,15 @@ struct EscolhaDePerfilView: View {
                                        image: "drop.circle.fill",
                                        title: "Sustentável",
                                        text: "Prioriza a economia de água potável, mesmo que implique em maior custo de implementação.", 
-                                       color: .blue)}
+                                       color: .blue, 
+                                       perfil: "Sustentável")}
                 Section {
                     BotaoEscolhaPerfil(indice: indiceBalancedo,
                                        dadosSimulacoes: dadosSimulacoes,
                                        image: "equal.circle.fill",
                                        title: "Balanceado",
                                        text: "Equilíbrio entre custo de implementação e economia de água.", 
-                                       color: .yellow)}
+                                       color: .yellow, perfil: "Balanceado")}
                 
                 Section {
                     BotaoEscolhaPerfil(indice: indiceEcoDinheiro,
@@ -38,7 +39,8 @@ struct EscolhaDePerfilView: View {
                                        image: "dollarsign.circle.fill",
                                        title: "Econômico",
                                        text: "Prioriza o menor custo da implmentação do projeto em detrimento da economia de água potável.", 
-                                       color: .green)
+                                       color: .green, 
+                                       perfil: "Econômico")
                 }
             }
         }

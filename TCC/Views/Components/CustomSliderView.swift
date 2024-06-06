@@ -31,7 +31,7 @@ struct CustomSliderView: View {
                     .padding(.vertical)
                     .font(.caption)
             } else {
-                Text("Essa substituição  nao é recomendada para o perfil de sua residência.")
+                Text("Essa substituição nao é recomendada para o perfil de sua residência.")
                     .padding(.vertical)
                     .font(.caption)
             }

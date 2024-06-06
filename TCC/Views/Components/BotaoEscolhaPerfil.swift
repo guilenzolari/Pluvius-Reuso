@@ -14,6 +14,7 @@ struct BotaoEscolhaPerfil: View {
     var title: String
     var text: String
     var color: Color
+    var perfil: String
     
     var body: some View {
         VStack {
@@ -37,7 +38,8 @@ struct BotaoEscolhaPerfil: View {
                     if dadosSimulacoes.indices.contains(indice) {
                             HStack {
                                 VStack {
-                                    Text("INVESTIMENTO INICIAL")
+                                    Text("INVESTIMENTO\nINICIAL")
+                                        .multilineTextAlignment(.center)
                                     Text("R$ \(dadosSimulacoes[indice].investimentoInicial, specifier: "%.2f")")
                                 }
                             Spacer()
@@ -64,7 +66,7 @@ struct BotaoEscolhaPerfil: View {
             Divider()
             NavigationLink{
                 if dadosSimulacoes.indices.contains(indice) {
-                    DetalhesSimulacaoView(dado: dadosSimulacoes[indice])
+                    DetalhesSimulacaoView(dado: dadosSimulacoes[indice], perfil: perfil)
                 } else {
                     Text("Carregando")}
             }label: {

@@ -26,7 +26,7 @@ struct DetalhesSimulacaoViewExport: View {
             LinhaTabelaHorizontal(campo: "Demanda Mensal de Água Pluvial (L)",
                                   valor: "\(String(format: "%.1f", dado.demandaAguaPluvialMensal))")
             LinhaTabelaHorizontal(campo: "Capacidade do Reservatório de Água Pluvial (L)",
-                                  valor: "\(String(format: "%.1f", dado.capacidadeReservatorio))")
+                                  valor: "\(String(format: "%.0f", dado.capacidadeReservatorio))")
             LinhaTabelaHorizontal(campo: "Potencial Médio de Atendimento",
                                   valor: "\(String(format: "%.1f", dado.potencialMedioDeAtendimentoDaDemanda * 100))%")
             LinhaTabelaHorizontal(campo: "Número de Meses Parcialmente Atendidos",

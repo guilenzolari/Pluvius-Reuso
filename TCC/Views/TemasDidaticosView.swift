@@ -22,7 +22,7 @@ struct TemasDidaticosView: View {
                                             imagem: "drop",
                                             texto: "Problema da Água no Mundo",
                                             cor: .blue)
-                        BotaoTemasDidaticos(destino: Text("AAA"),
+                        BotaoTemasDidaticos(destino: IndicePluviometricoView(),
                                             imagem: "cloud.drizzle",
                                             texto: "Índice pluviométrico",
                                             cor: .indigo)
