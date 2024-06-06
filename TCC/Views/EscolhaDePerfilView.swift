@@ -57,6 +57,7 @@ struct EscolhaDePerfilView: View {
     func atualizarDados() {
         dadosSimulacoes = vm.simulacoesVariandoVolumes(percentual: inputs.percentualDeSubstituicao)
         indiceEcoAgua = escolhaPerfilVM.indicePerfilEcoAgua(dados: dadosSimulacoes)
+        indiceBalancedo = escolhaPerfilVM.indicePerfilBalanceado(dados: dadosSimulacoes)
     }
 }
 
