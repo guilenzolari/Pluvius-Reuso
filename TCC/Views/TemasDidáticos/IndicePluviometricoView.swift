@@ -18,33 +18,51 @@ struct IndicePluviometricoView: View {
     let texto4 = "Em resumo, Campinas tem um regime de chuvas concentrado no verão, com altos índices pluviométricos, e um inverno mais seco, refletindo um padrão climático típico de áreas subtropicais."
     
     let precipitacao = [
-        ("Janeiro", 245.5),
-        ("Fevereiro", 144.85),
-        ("Março", 25.25),
-        ("Abril", 165.65),
-        ("Maio", 221.85),
-        ("Junho", 84.5),
-        ("Julho", 7.75),
-        ("Agosto", 8.0),
-        ("Setembro", 105.05),
-        ("Outubro", 61.8),
-        ("Novembro", 94.35),
-        ("Dezembro", 233.3)]
+            ("Jan", 245.5),
+            ("Fev", 213.6),
+            ("Mar", 106.05),
+            ("Abr", 26.15),
+            ("Mai", 31.4),
+            ("Jun", 21.4),
+            ("Jul", 4.45),
+            ("Ago", 21.85),
+            ("Set", 48.15),
+            ("Out", 120.9),
+            ("Nov", 113.15),
+            ("Dez", 246.1)]
+
     
     var body: some View {
-        ScrollView{
-            VStack(alignment: .leading) {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
                 Text(texto1)
-                    .padding()
                 Text(texto2)
-                    .padding()
                 Text(texto3)
-                    .padding()
-                Text(texto4)
-                    .padding()
-            }
-        }
-        
+                
+                VStack{
+                    Text("Precipitação média em Campinas [mm]")
+                        .fontWeight(.bold)
+                    Text("(2020 - 2023)")
+                        .font(.footnote)
+                        .foregroundStyle(Color.secondary)
+                    Chart {
+                        ForEach(precipitacao, id: \.0) { data in
+                            BarMark(
+                                x: .value("Mês", data.0),
+                                y: .value("Precipitação (mm)", data.1)
+                            ).cornerRadius(7)
+                                .annotation(position: .top, alignment: .center) {
+                                    Text("\(String(format: "%.1f", data.1))")
+                                        .font(.caption)
+                                    .foregroundStyle(Color.secondary)}
+                                .foregroundStyle(Color.indigo.gradient)
+                            
+                        }
+                    }
+                    .frame(height: 300)
+                }.padding()
+            }.padding()
+        }.navigationTitle(Text("Índice Pluviométrico"))
     }
 }
 
