@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */; };
+		F20145BE2BDED3CB00C49F91 /* MemorialDeCalculo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20145BD2BDED3CB00C49F91 /* MemorialDeCalculo.swift */; };
 		F20784032C050C6700AB27A1 /* LinhaTabelaHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */; };
 		F20784052C05155B00AB27A1 /* View+PaddingSides.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20784042C05155B00AB27A1 /* View+PaddingSides.swift */; };
 		F24E13DD2BD8525F00ED1579 /* TCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13DC2BD8525F00ED1579 /* TCCApp.swift */; };
@@ -22,9 +22,10 @@
 		F27EDB832BFD78ED00368CE7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB822BFD78ED00368CE7 /* OnboardingView.swift */; };
 		F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */; };
 		F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */; };
-		F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */; };
+		F295EC272BE55F5F005DAC05 /* CalculoCustoReservatorio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295EC262BE55F5F005DAC05 /* CalculoCustoReservatorio.swift */; };
 		F29BC1D22C11FEBA00A38009 /* IndicePluviometricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29BC1D12C11FEBA00A38009 /* IndicePluviometricoView.swift */; };
 		F29BC1D42C127FA200A38009 /* ProblemaDaAguaNoMundoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29BC1D32C127FA200A38009 /* ProblemaDaAguaNoMundoView.swift */; };
+		F2BF30132C13736600DDCF7C /* ComoCalcularAreaCaptacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BF30122C13736600DDCF7C /* ComoCalcularAreaCaptacaoView.swift */; };
 		F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */; };
 		F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */; };
 		F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */; };
@@ -37,7 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculosReservatorios.swift; sourceTree = "<group>"; };
+		F20145BD2BDED3CB00C49F91 /* MemorialDeCalculo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorialDeCalculo.swift; sourceTree = "<group>"; };
 		F20784022C050C6700AB27A1 /* LinhaTabelaHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaTabelaHorizontal.swift; sourceTree = "<group>"; };
 		F20784042C05155B00AB27A1 /* View+PaddingSides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PaddingSides.swift"; sourceTree = "<group>"; };
 		F24E13D92BD8525F00ED1579 /* TCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,9 +54,10 @@
 		F27EDB822BFD78ED00368CE7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+GetSize.swift"; sourceTree = "<group>"; };
 		F283CFC32BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundedTwoDecimal.swift"; sourceTree = "<group>"; };
-		F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoCAPEX.swift; sourceTree = "<group>"; };
+		F295EC262BE55F5F005DAC05 /* CalculoCustoReservatorio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculoCustoReservatorio.swift; sourceTree = "<group>"; };
 		F29BC1D12C11FEBA00A38009 /* IndicePluviometricoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicePluviometricoView.swift; sourceTree = "<group>"; };
 		F29BC1D32C127FA200A38009 /* ProblemaDaAguaNoMundoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemaDaAguaNoMundoView.swift; sourceTree = "<group>"; };
+		F2BF30122C13736600DDCF7C /* ComoCalcularAreaCaptacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComoCalcularAreaCaptacaoView.swift; sourceTree = "<group>"; };
 		F2F9A4832C06555100A0D4FB /* EscolhaDePerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolhaDePerfilView.swift; sourceTree = "<group>"; };
 		F2F9A4852C0683FF00A0D4FB /* BotaoTemasDidaticos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoTemasDidaticos.swift; sourceTree = "<group>"; };
 		F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
@@ -156,8 +158,8 @@
 		F295EC252BE55B58005DAC05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F20145BD2BDED3CB00C49F91 /* CalculosReservatorios.swift */,
-				F295EC262BE55F5F005DAC05 /* CalculoCAPEX.swift */,
+				F20145BD2BDED3CB00C49F91 /* MemorialDeCalculo.swift */,
+				F295EC262BE55F5F005DAC05 /* CalculoCustoReservatorio.swift */,
 				F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */,
 			);
 			path = Models;
@@ -169,6 +171,7 @@
 				F2F9A4962C0A3C7200A0D4FB /* UsosDaAguaTratada.swift */,
 				F29BC1D12C11FEBA00A38009 /* IndicePluviometricoView.swift */,
 				F29BC1D32C127FA200A38009 /* ProblemaDaAguaNoMundoView.swift */,
+				F2BF30122C13736600DDCF7C /* ComoCalcularAreaCaptacaoView.swift */,
 			);
 			name = "TemasDidáticos";
 			path = "TemasDidáticos";
@@ -260,7 +263,7 @@
 				F24E13DF2BD8525F00ED1579 /* InserirDadosView.swift in Sources */,
 				F2F9A4932C09630C00A0D4FB /* PDFManager.swift in Sources */,
 				F2F9A48F2C08F19F00A0D4FB /* EscolhaDePerfilViewModel.swift in Sources */,
-				F295EC272BE55F5F005DAC05 /* CalculoCAPEX.swift in Sources */,
+				F295EC272BE55F5F005DAC05 /* CalculoCustoReservatorio.swift in Sources */,
 				F2F9A4972C0A3C7200A0D4FB /* UsosDaAguaTratada.swift in Sources */,
 				F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */,
 				F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */,
@@ -273,8 +276,9 @@
 				F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */,
 				F24E13F02BD8545000ED1579 /* MainView.swift in Sources */,
 				F29BC1D42C127FA200A38009 /* ProblemaDaAguaNoMundoView.swift in Sources */,
+				F2BF30132C13736600DDCF7C /* ComoCalcularAreaCaptacaoView.swift in Sources */,
 				F29BC1D22C11FEBA00A38009 /* IndicePluviometricoView.swift in Sources */,
-				F20145BE2BDED3CB00C49F91 /* CalculosReservatorios.swift in Sources */,
+				F20145BE2BDED3CB00C49F91 /* MemorialDeCalculo.swift in Sources */,
 				F2F9A4952C09694800A0D4FB /* DetalhesSimulacaoViewExport.swift in Sources */,
 				F27EDB792BFD727500368CE7 /* OnboardingManagerView.swift in Sources */,
 				F2F9A4862C0683FF00A0D4FB /* BotaoTemasDidaticos.swift in Sources */,

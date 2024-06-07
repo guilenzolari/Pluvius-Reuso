@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-class CalculosReservatorios: ObservableObject {
+class MemorialDeCalculo: ObservableObject {
     
     let consumoMedioPessoa: Double = 156 // Litros/dia*pessoa
     let coeficienteAproveitamento: Double = 0.8
@@ -10,7 +10,7 @@ class CalculosReservatorios: ObservableObject {
     let custoBomba: Double = 150
     let custoTubulacao: Double = 100
     let custoClorador: Double = 150
-    let capex = CalculoCAPEX()
+    let capex = CalculoCustoReservatorio()
     let opex: Double = 300
     
     @ObservedObject var inputs = InserirDadosViewModel.shared

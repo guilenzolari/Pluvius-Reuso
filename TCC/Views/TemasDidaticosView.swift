@@ -34,7 +34,7 @@ struct TemasDidaticosView: View {
                                             imagem: "arrow.circlepath",
                                             texto: "Troca do Clorador",
                                             cor: .black)
-                        BotaoTemasDidaticos(destino: Text("AAA"),
+                        BotaoTemasDidaticos(destino: ComoCalcularAreaCaptacaoView(),
                                             imagem: "rectangle",
                                             texto: "Como calcular a área de captação",
                                             cor: .red)

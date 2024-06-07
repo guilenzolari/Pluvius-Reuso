@@ -3,7 +3,7 @@ import SwiftUI
 struct EscolhaDePerfilView: View {
     @Binding var selectedTab: Int
     @ObservedObject var inputs = InserirDadosViewModel.shared
-    var vm = CalculosReservatorios()
+    var vm = MemorialDeCalculo()
     var escolhaPerfilVM = EscolhaDePerfilViewModel()
     @State var indiceBalancedo = 6
     @State var indiceEcoDinheiro = 0

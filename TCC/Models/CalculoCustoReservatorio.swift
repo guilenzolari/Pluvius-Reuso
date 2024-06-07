@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CalculoCAPEX {
+class CalculoCustoReservatorio {
     
     let custoReservatorio600 = 1420.63
     let custoReservatorio1000 = 1844.5
