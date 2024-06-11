@@ -9,7 +9,7 @@ struct TemasDidaticosView: View {
             VStack {
                 List{
                     Section {
-                        BotaoTemasDidaticos(destino: Text("AAA"),
+                        BotaoTemasDidaticos(destino: Text("Em construção"),
                                             imagem: "gearshape",
                                             texto: "Funcionamento do Processo",
                                             cor: .gray)
@@ -26,11 +26,11 @@ struct TemasDidaticosView: View {
                                             imagem: "cloud.drizzle",
                                             texto: "Índice pluviométrico",
                                             cor: .indigo)
-                        BotaoTemasDidaticos(destino: Text("AAA"),
+                        BotaoTemasDidaticos(destino: Text("Em construção"),
                                             imagem: "shippingbox",
                                             texto: "Materiais da Operação",
                                             cor: .brown)
-                        BotaoTemasDidaticos(destino: Text("AAA"),
+                        BotaoTemasDidaticos(destino: Text("Em construção"),
                                             imagem: "arrow.circlepath",
                                             texto: "Troca do Clorador",
                                             cor: .black)
@@ -38,7 +38,7 @@ struct TemasDidaticosView: View {
                                             imagem: "rectangle",
                                             texto: "Como calcular a área de captação",
                                             cor: .red)
-                        BotaoTemasDidaticos(destino: Text("AAA"),
+                        BotaoTemasDidaticos(destino: Text("Em construção"),
                                             imagem: "exclamationmark.triangle",
                                             texto: "Limitações do projeto",
                                             cor: Color.yellow)
