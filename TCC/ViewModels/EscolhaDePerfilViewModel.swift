@@ -22,10 +22,8 @@ struct EscolhaDePerfilViewModel {
                 index = i
             }
         }
-        
         return index
     }
-
     
     func indicePerfilEcoAgua(dados: [SumarioDadosTotais]) -> Int {
         guard !dados.isEmpty else {
@@ -45,5 +43,10 @@ struct EscolhaDePerfilViewModel {
         }
         return index
     }
-
+    
+    func aproximacaoDezena(_ numero: Double) -> Int {
+        let dezena = 10.0
+        let arredondado = round(numero/dezena) * dezena
+        return Int(arredondado)
+    }
 }

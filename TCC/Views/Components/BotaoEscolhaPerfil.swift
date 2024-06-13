@@ -15,6 +15,7 @@ struct BotaoEscolhaPerfil: View {
     var text: String
     var color: Color
     var perfil: String
+    var vm = EscolhaDePerfilViewModel()
     
     var body: some View {
         VStack {
@@ -32,7 +33,6 @@ struct BotaoEscolhaPerfil: View {
                 Spacer()
             }.padding(.vertical, 4)
             
-            
             HStack {
                 VStack {
                     if dadosSimulacoes.indices.contains(indice) {
@@ -40,12 +40,12 @@ struct BotaoEscolhaPerfil: View {
                                 VStack {
                                     Text("INVESTIMENTO\nINICIAL")
                                         .multilineTextAlignment(.center)
-                                    Text("R$ \(dadosSimulacoes[indice].investimentoInicial, specifier: "%.2f")")
+                                    Text("R$ \(vm.aproximacaoDezena(dadosSimulacoes[indice].investimentoInicial))")
                                 }
                             Spacer()
                             VStack{
                                 Text("ECONOMIA")
-                                Text("R$ \(dadosSimulacoes[indice].economiaFinanceiraAnual, specifier: "%.2f")/ANO")
+                                Text("R$ \(vm.aproximacaoDezena(dadosSimulacoes[indice].economiaFinanceiraAnual))/ANO")
                             }
                             Spacer()
                             VStack{
