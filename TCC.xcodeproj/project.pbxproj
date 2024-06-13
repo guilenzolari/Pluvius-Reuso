@@ -18,6 +18,9 @@
 		F24E13ED2BD8530200ED1579 /* TemasDidaticosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */; };
 		F24E13F02BD8545000ED1579 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13EF2BD8545000ED1579 /* MainView.swift */; };
 		F24E13F22BD8839500ED1579 /* InserirDadosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E13F12BD8839500ED1579 /* InserirDadosViewModel.swift */; };
+		F26BC9642C1B3AA300457754 /* SumarioDadosTotais.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BC9632C1B3AA300457754 /* SumarioDadosTotais.swift */; };
+		F26BC9662C1B3AC400457754 /* DadosMensais.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BC9652C1B3AC400457754 /* DadosMensais.swift */; };
+		F26BC9682C1B3AD700457754 /* DadosConsumoMes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BC9672C1B3AD700457754 /* DadosConsumoMes.swift */; };
 		F27EDB792BFD727500368CE7 /* OnboardingManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB782BFD727500368CE7 /* OnboardingManagerView.swift */; };
 		F27EDB832BFD78ED00368CE7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDB822BFD78ED00368CE7 /* OnboardingView.swift */; };
 		F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */; };
@@ -50,6 +53,9 @@
 		F24E13EC2BD8530200ED1579 /* TemasDidaticosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemasDidaticosView.swift; sourceTree = "<group>"; };
 		F24E13EF2BD8545000ED1579 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F24E13F12BD8839500ED1579 /* InserirDadosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserirDadosViewModel.swift; sourceTree = "<group>"; };
+		F26BC9632C1B3AA300457754 /* SumarioDadosTotais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumarioDadosTotais.swift; sourceTree = "<group>"; };
+		F26BC9652C1B3AC400457754 /* DadosMensais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadosMensais.swift; sourceTree = "<group>"; };
+		F26BC9672C1B3AD700457754 /* DadosConsumoMes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadosConsumoMes.swift; sourceTree = "<group>"; };
 		F27EDB782BFD727500368CE7 /* OnboardingManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManagerView.swift; sourceTree = "<group>"; };
 		F27EDB822BFD78ED00368CE7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F283CFBF2BFE672A00F5B3BB /* View+GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+GetSize.swift"; sourceTree = "<group>"; };
@@ -158,6 +164,9 @@
 		F295EC252BE55B58005DAC05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F26BC9632C1B3AA300457754 /* SumarioDadosTotais.swift */,
+				F26BC9672C1B3AD700457754 /* DadosConsumoMes.swift */,
+				F26BC9652C1B3AC400457754 /* DadosMensais.swift */,
 				F20145BD2BDED3CB00C49F91 /* MemorialDeCalculo.swift */,
 				F295EC262BE55F5F005DAC05 /* CalculoCustoReservatorio.swift */,
 				F2F9A4872C07866B00A0D4FB /* OnboardingContent.swift */,
@@ -268,13 +277,16 @@
 				F2F9A4882C07866B00A0D4FB /* OnboardingContent.swift in Sources */,
 				F2F9A4842C06555100A0D4FB /* EscolhaDePerfilView.swift in Sources */,
 				F24E13F22BD8839500ED1579 /* InserirDadosViewModel.swift in Sources */,
+				F26BC9682C1B3AD700457754 /* DadosConsumoMes.swift in Sources */,
 				F24E13EB2BD852F200ED1579 /* DetalhesSimulacaoView.swift in Sources */,
 				F283CFC02BFE672A00F5B3BB /* View+GetSize.swift in Sources */,
+				F26BC9662C1B3AC400457754 /* DadosMensais.swift in Sources */,
 				F27EDB832BFD78ED00368CE7 /* OnboardingView.swift in Sources */,
 				F283CFC42BFFD6C500F5B3BB /* Double+RoundedTwoDecimal.swift in Sources */,
 				F24E13ED2BD8530200ED1579 /* TemasDidaticosView.swift in Sources */,
 				F2F9A4912C094A1000A0D4FB /* BotaoEscolhaPerfil.swift in Sources */,
 				F24E13F02BD8545000ED1579 /* MainView.swift in Sources */,
+				F26BC9642C1B3AA300457754 /* SumarioDadosTotais.swift in Sources */,
 				F29BC1D42C127FA200A38009 /* ProblemaDaAguaNoMundoView.swift in Sources */,
 				F2BF30132C13736600DDCF7C /* ComoCalcularAreaCaptacaoView.swift in Sources */,
 				F29BC1D22C11FEBA00A38009 /* IndicePluviometricoView.swift in Sources */,
