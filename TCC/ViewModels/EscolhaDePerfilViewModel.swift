@@ -13,16 +13,16 @@ struct EscolhaDePerfilViewModel {
         guard !dados.isEmpty else {
             return -1
         }
-        var index = 0
+        var indiceMenorTempoDeRetorno = 0
         var menorTempoDeRetorno = dados[0].tempoDeRetorno
         
         for (i, dado) in dados.enumerated() {
             if dado.tempoDeRetorno < menorTempoDeRetorno {
                 menorTempoDeRetorno = dado.tempoDeRetorno
-                index = i
+                indiceMenorTempoDeRetorno = i
             }
         }
-        return index
+        return indiceMenorTempoDeRetorno
     }
     
     func indicePerfilEcoAgua(dados: [SumarioDadosTotais]) -> Int {
@@ -31,17 +31,17 @@ struct EscolhaDePerfilViewModel {
             return -1
         }
         
-        var index = 0
+        var indiceMelhorPotencialDeAtendimentoDaDemenda = 0
         var melhorPotencial = dados[0].potencialMedioDeAtendimentoDaDemanda
         
         for (i, dado) in dados.enumerated() {
             let potencialAtual = dado.potencialMedioDeAtendimentoDaDemanda
             if potencialAtual > melhorPotencial {
                 melhorPotencial = potencialAtual
-                index = i
+                indiceMelhorPotencialDeAtendimentoDaDemenda = i
             }
         }
-        return index
+        return indiceMelhorPotencialDeAtendimentoDaDemenda
     }
     
     func aproximacaoDezena(_ numero: Double) -> Int {

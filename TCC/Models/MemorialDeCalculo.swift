@@ -15,7 +15,7 @@ class MemorialDeCalculo: ObservableObject {
     
     @ObservedObject var inputs = InserirDadosViewModel.shared
     
-    func demandaAguaPluvialMensal(percentualSubstituicao: Double) -> Double {
+    private func demandaAguaPluvialMensal(percentualSubstituicao: Double) -> Double {
         if inputs.consumoMedioDaResidencia == 0 {
             let demanda =  inputs.quantidadeMoradoresDaResidencia * consumoMedioPessoa * percentualSubstituicao * (365 / 12)
             return demanda
@@ -26,23 +26,23 @@ class MemorialDeCalculo: ObservableObject {
     }
 
     
-    func volumeCaptadoNosMeses(precipitacaoDoMes: Double) -> Double {
+    private func volumeCaptadoNosMeses(precipitacaoDoMes: Double) -> Double {
         return precipitacaoDoMes * coeficienteAproveitamento * inputs.area
     }
     
-    func volumeDisponivelReservatorioPosCaptacaoPreConsumo(volumeReservatorio: Double, volumeReservatorioPosConsumo: Double, volumeCaptado: Double) -> Double {
+    private func volumeDisponivelReservatorioPosCaptacaoPreConsumo(volumeReservatorio: Double, volumeReservatorioPosConsumo: Double, volumeCaptado: Double) -> Double {
         return min(volumeReservatorio, volumeReservatorioPosConsumo + volumeCaptado)
     }
     
-    func volumeReservatorioPosConsumo(volumeDisponivelReservatorioPosCaptacaoPreConsumo: Double, demandaAguaPluvialMensal: Double) -> Double {
+    private func volumeReservatorioPosConsumo(volumeDisponivelReservatorioPosCaptacaoPreConsumo: Double, demandaAguaPluvialMensal: Double) -> Double {
         return max(0, volumeDisponivelReservatorioPosCaptacaoPreConsumo - demandaAguaPluvialMensal)
     }
     
-    func volumeDeAguaConsumido(volumeDisponivelReservatorioPosCaptacaoPreConsumo: Double, demandaAguaPluvialMensal: Double) -> Double {
+   private func volumeDeAguaConsumido(volumeDisponivelReservatorioPosCaptacaoPreConsumo: Double, demandaAguaPluvialMensal: Double) -> Double {
         return min(volumeDisponivelReservatorioPosCaptacaoPreConsumo, demandaAguaPluvialMensal)
     }
     
-    func potencialDeAtendimentoDaDemanda(volumeDeAguaConsumido: Double, demandaAguaPluvialMensal: Double) -> Double {
+    private func potencialDeAtendimentoDaDemanda(volumeDeAguaConsumido: Double, demandaAguaPluvialMensal: Double) -> Double {
         return volumeDeAguaConsumido / demandaAguaPluvialMensal
     }
     
@@ -147,12 +147,12 @@ class MemorialDeCalculo: ObservableObject {
         return dadosTotais
     }
     
-    func potencialMedioDeAtendimentoDaDemanda(dadosMeses: [DadosConsumoMes]) -> Double {
+    private func potencialMedioDeAtendimentoDaDemanda(dadosMeses: [DadosConsumoMes]) -> Double {
         let valores = dadosMeses.map { $0.potencialDeAtendimentoDaDemanda }
         return calcularMedia(valores)
     }
     
-    func calcularMedia(_ numeros: [Double]) -> Double {
+    private func calcularMedia(_ numeros: [Double]) -> Double {
         let soma = numeros.reduce(0, +)
         return soma / Double(numeros.count)
     }
@@ -162,43 +162,43 @@ class MemorialDeCalculo: ObservableObject {
         return Double(count) / Double(precipitacaoMensal.count / 12)
     }
     
-    func mesesAtendidosCompletamente(dadosMeses: [DadosConsumoMes]) -> Double {
+    private func mesesAtendidosCompletamente(dadosMeses: [DadosConsumoMes]) -> Double {
         let count = dadosMeses.filter { $0.potencialDeAtendimentoDaDemanda == 1 }.count
         return Double(count) / Double(precipitacaoMensal.count / 12)
     }
     
-    func mesesNaoAtendidos(dadosMeses: [DadosConsumoMes]) -> Double {
+    private func mesesNaoAtendidos(dadosMeses: [DadosConsumoMes]) -> Double {
         let count = dadosMeses.filter { $0.potencialDeAtendimentoDaDemanda < 0.05 }.count
         return Double(count) / Double(precipitacaoMensal.count / 12)
     }
     
-    func outrosCustos() -> Double {
+    private func outrosCustos() -> Double {
         return custoBomba + custoClorador + custoTubulacao
     }
     
-    func investimentoInicial(volume: Double) -> Double {
+    private func investimentoInicial(volume: Double) -> Double {
         return outrosCustos() + capex.custoTotalReservatorios(volume: volume)
     }
     
     //L
-    func economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
+    private func economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
         return potencialMedioDeAtendimentoDaDemanda * demandaMensal * 12
     }
     
-    func economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
+    private func economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
         let economiaDeAguaAnualEmLitros = economiaDeAguaAnual(potencialMedioDeAtendimentoDaDemanda: potencialMedioDeAtendimentoDaDemanda, demandaMensal: demandaMensal)
         let economiaDeAguaMensalEmMetrosCubicos = economiaDeAguaAnualEmLitros / (1000 * 12) // Convertendo para m³
         return custoDaAgua(consumo: economiaDeAguaMensalEmMetrosCubicos) * 12
     }
 
     
-    func tempoDeRetorno(volume: Double, potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
+    private func tempoDeRetorno(volume: Double, potencialMedioDeAtendimentoDaDemanda: Double, demandaMensal: Double) -> Double {
         let economiaEfetivaAnual = economiaFinanceiraAnual(potencialMedioDeAtendimentoDaDemanda: potencialMedioDeAtendimentoDaDemanda, demandaMensal: demandaMensal) - opex
         return investimentoInicial(volume: volume) / economiaEfetivaAnual
     }
     
     // R$/m3
-    func custoDaAgua(consumo: Double) -> Double {
+    private func custoDaAgua(consumo: Double) -> Double {
         if consumo <= 10 {
             return (45.94 + 36.75 + 19.76) * consumo
         } else if consumo <= 15 {
