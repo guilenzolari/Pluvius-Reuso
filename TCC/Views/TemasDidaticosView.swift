@@ -9,15 +9,14 @@ struct TemasDidaticosView: View {
             VStack {
                 List{
                     Section {
-                        BotaoTemasDidaticos(destino: Text("Em construção"),
+                        BotaoTemasDidaticos(destino: FuncionamentoDoProcessoView(),
                                             imagem: "gearshape",
                                             texto: "Funcionamento do Processo",
                                             cor: .gray)
-                        BotaoTemasDidaticos(destino: UsosDaAguaTratada(),
+                        BotaoTemasDidaticos(destino: UsosDaAguaTratadaView(),
                                             imagem: "spigot",
                                             texto: "Usos da Água Tratada",
                                             cor: .orange)
-                        
                         BotaoTemasDidaticos(destino: ProblemaDaAguaNoMundoView(),
                                             imagem: "drop",
                                             texto: "Problema da Água no Mundo",
@@ -26,11 +25,11 @@ struct TemasDidaticosView: View {
                                             imagem: "cloud.drizzle",
                                             texto: "Índice pluviométrico",
                                             cor: .indigo)
-                        BotaoTemasDidaticos(destino: Text("Em construção"),
+                        BotaoTemasDidaticos(destino: MateriaisDaOperacao(),
                                             imagem: "shippingbox",
                                             texto: "Materiais da Operação",
                                             cor: .brown)
-                        BotaoTemasDidaticos(destino: Text("Em construção"),
+                        BotaoTemasDidaticos(destino: TrocaDoCloradorView(),
                                             imagem: "arrow.circlepath",
                                             texto: "Troca do Clorador",
                                             cor: .black)
@@ -38,7 +37,7 @@ struct TemasDidaticosView: View {
                                             imagem: "rectangle",
                                             texto: "Como calcular a área de captação",
                                             cor: .red)
-                        BotaoTemasDidaticos(destino: Text("Em construção"),
+                        BotaoTemasDidaticos(destino: LimitacoesDoProcessoView(),
                                             imagem: "exclamationmark.triangle",
                                             texto: "Limitações do projeto",
                                             cor: Color.yellow)
@@ -49,4 +48,3 @@ struct TemasDidaticosView: View {
         }
     }
 }
-

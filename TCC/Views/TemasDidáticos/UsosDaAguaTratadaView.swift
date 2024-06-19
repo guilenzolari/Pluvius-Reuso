@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UsosDaAguaTratada: View {
+struct UsosDaAguaTratadaView: View {
     let titles = [
         "1. Irrigação de Jardins e Áreas Verdes",
         "2. Descarga em Vasos Sanitários",
@@ -47,6 +47,6 @@ struct UsosDaAguaTratada: View {
 }
 
 #Preview {
-    UsosDaAguaTratada()
+    UsosDaAguaTratadaView()
 }
 

@@ -49,15 +49,15 @@ class MemorialDeCalculo: ObservableObject {
     func calculosDoMes(index: Int, volumeReservatorio: Double, percentual: Double) -> DadosConsumoMes {
         let volumeDeAguapluvialCaptada = volumeCaptadoNosMeses(precipitacaoDoMes: precipitacaoMensal[index])
         
-        let volumeDisponivelReservatorioPosCaptacaoPreConsumo1: Double
+        let volumeDisponivelReservatorio: Double
         if index == 0 {
-            volumeDisponivelReservatorioPosCaptacaoPreConsumo1 = volumeDisponivelReservatorioPosCaptacaoPreConsumo(
+            volumeDisponivelReservatorio = volumeDisponivelReservatorioPosCaptacaoPreConsumo(
                 volumeReservatorio: volumeReservatorio,
                 volumeReservatorioPosConsumo: 0,
                 volumeCaptado: volumeDeAguapluvialCaptada
             )
         } else {
-            volumeDisponivelReservatorioPosCaptacaoPreConsumo1 = volumeDisponivelReservatorioPosCaptacaoPreConsumo(
+            volumeDisponivelReservatorio = volumeDisponivelReservatorioPosCaptacaoPreConsumo(
                 volumeReservatorio: volumeReservatorio,
                 volumeReservatorioPosConsumo: calculosDoMes(index: index - 1, volumeReservatorio: volumeReservatorio, percentual: percentual).volumeReservatorioPosConsumo,
                 volumeCaptado: volumeDeAguapluvialCaptada
@@ -66,11 +66,11 @@ class MemorialDeCalculo: ObservableObject {
         
         let demandaDeAgua = demandaAguaPluvialMensal(percentualSubstituicao: percentual)
         let volumeReservatorioPosConsumo = volumeReservatorioPosConsumo(
-            volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1,
+            volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorio,
             demandaAguaPluvialMensal: demandaDeAgua
         )
         let volumeDeAguaConsumido = volumeDeAguaConsumido(
-            volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1,
+            volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorio,
             demandaAguaPluvialMensal: demandaDeAgua
         )
         let potencialDeAtendimentoDaDemanda = potencialDeAtendimentoDaDemanda(
@@ -80,7 +80,7 @@ class MemorialDeCalculo: ObservableObject {
         
         return DadosConsumoMes(
             volumeDeAguapluvialCaptada: volumeDeAguapluvialCaptada,
-            volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorioPosCaptacaoPreConsumo1,
+            volumeDisponivelReservatorioPosCaptacaoPreConsumo: volumeDisponivelReservatorio,
             demandaDeAgua: demandaDeAgua,
             volumeReservatorioPosConsumo: volumeReservatorioPosConsumo,
             volumeConsumido: volumeDeAguaConsumido,
