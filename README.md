@@ -31,6 +31,7 @@ A implementação computacional do software foi realizada utilizando a linguagem
 - **Linguagem de Programação:** Swift
 - **Framework:** SwiftUI
 - **Plataforma:** iOS
+- **Arquitetura:** MVVM
 
 ## Resultados
 
@@ -47,25 +48,6 @@ Em termos financeiros, a economia gerada pode justificar o investimento inicial 
 Você pode baixar o Pluvius Reuso através do seguinte link:
 [Pluvius Reuso na App Store](https://apps.apple.com/br/app/pluvius-reuso/id6503223379)
 
-## Contribuições
-
-Sinta-se à vontade para contribuir com este projeto. Para isso, você pode seguir os seguintes passos:
-
-1. Faça um fork do repositório
-2. Crie uma nova branch (`git checkout -b feature/nome-da-feature`)
-3. Faça as alterações necessárias e commit (`git commit -m 'Descrição das alterações'`)
-4. Faça o push para a branch (`git push origin feature/nome-da-feature`)
-5. Abra um Pull Request
-
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## Contato
-
-Para mais informações, entre em contato através do email: suporte@pluviusreuso.com
-
----
-
-Agradecemos por utilizar o Pluvius Reuso e contribuir para a conservação de nossos preciosos recursos hídricos!
-```
