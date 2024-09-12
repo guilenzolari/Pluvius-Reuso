@@ -14,12 +14,13 @@ struct LinhaTabelaHorizontal: View {
     var body: some View {
         HStack{
             Text(campo)
+                .foregroundStyle(Color.gray)
             Spacer()
             Text(valor)
-        }.padding(.horizontal)
-            .padding(.vertical, 5)
+        }
     }
 }
+
 
 #Preview {
     LinhaTabelaHorizontal(campo: "Percentual de substituição", valor: "30%")
